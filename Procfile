@@ -1,0 +1,1 @@
+web: gunicorn gamersgambit.wsgi
