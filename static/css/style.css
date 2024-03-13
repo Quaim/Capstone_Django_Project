@@ -1,3 +1,74 @@
-body {
+
+
+html, body {
+    height: 100%;
+}@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Exo:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap');
+
+/* FONT */
+.exo-title-bold {
+    font-family: "Exo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+h1 {
+    font-family: "Exo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+p {
+    font-family: "Exo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/* Background Colours */
+
+.bg-red1 {
     background-color: red;
+}
+
+.bg-red2 {
+    background-color: #e71a36;
+}
+
+.bg-green1 {
+    background-color:#036977;
+}
+
+.text-green1 {
+    color:#036977;
+}
+
+
+.bg-blue1 {
+    background-color: #61bffa;
+
+}
+
+.bg-blue2 {
+    background-color: #06243e;
+
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+
+
+
+html, body {
+    height: 100%;
 }
