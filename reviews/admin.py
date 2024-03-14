@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import GameReview, Genre
+from .models import GameReview, Genre, Tag, Platform
 from django_summernote.admin import SummernoteModelAdmin
 # Register your models here.
 
@@ -17,3 +17,5 @@ class GameReviewAdmin(SummernoteModelAdmin):
 
 
 admin.site.register(Genre)
+admin.site.register(Tag)
+admin.site.register(Platform)

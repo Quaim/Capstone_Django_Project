@@ -10,7 +10,17 @@ class Genre(models.Model):
     def __str__(self):
         return self.name
 
+class Tag(models.Model):
+    name = models.CharField(max_length=100, null=False, blank=False)
 
+    def __str__(self):
+        return self.name
+
+class Platform(models.Model):
+    name = models.CharField(max_length=100, null=False, blank=False)
+
+    def __str__(self):
+        return self.name        
 
 
 class GameReview(models.Model):
@@ -18,6 +28,8 @@ class GameReview(models.Model):
     title = models.CharField(max_length=100, null=False, blank=False)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE, null=True, blank=False)
+    tags = models.ManyToManyField('Tag')
+    platforms = models.ManyToManyField('Platform')
     description = models.TextField(null=False, blank=False)
     featured_image = CloudinaryField("image", default="placeholder")
     review = models.TextField(null=False, blank=False)
