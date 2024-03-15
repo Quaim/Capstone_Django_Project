@@ -1,7 +1,7 @@
 ---
 name: 'User Story (USER):'
-about: Describe this issue template's purpose here.
-title: ''
+about: User story for a normal user feature.
+title: 'USERSTORY (USER):'
 labels: USERSTORY(USER)
 assignees: ''
 
