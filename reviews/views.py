@@ -43,9 +43,8 @@ def review_detail(request, gamereview_id):
 @login_required
 def create_review(request):
     """
-    Logged in users will be able to create an event with the use
-    of the `EventCreationForm` which uses fields from the
-    `EventModel` form. Once an event has been created, it will
+    Logged in users will be able to create a review using the `CreateReview` Form which uses fields from the
+    `GameReviewModel`. Once a review has been created, it will
     be put up for review by an admin and redirect the user back
     to the home page.
     """

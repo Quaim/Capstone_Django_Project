@@ -1,5 +1,5 @@
 from django import forms
-# from django.forms import CheckboxInput, ModelChoiceField, Select, ModelMultipleChoiceField, SelectMultiple
+
 from .models import GameReview, Tag, Platform
 
 

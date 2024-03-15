@@ -62,9 +62,9 @@
                         <a class="nav-link text-white {% if request.path == logout_url %}active"
                             aria-current="page{%endif%}" href="{% url 'account_logout' %}">Logout</a>
                     </li>
-                    <!-- <li class="nav-item">
-                            <a class="nav-link text-white" aria-current="" href="#">Profile</a>
-                        </li> -->
+                    <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="" href="{% url 'create-review' %}">Create Review</a>
+                        </li>
 
                     {% else %}
 
@@ -80,9 +80,7 @@
                         <button class="btn btn-outline-primary bg-green1 text-white" type="submit">Search</button>
                     </form>
                 </ul>
-                <!-- <span class="navbar-text text-muted">
-                        adventures of a software developer
-                    </span> -->
+                
             </div>
         </div>
     </nav>
