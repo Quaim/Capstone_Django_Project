@@ -1,7 +1,7 @@
 ---
 name: 'User Story (ADMIN):'
-about: Describe this issue template's purpose here.
-title: ''
+about: User story related to an admin feature.
+title: 'USERSTORY (ADMIN):'
 labels: USERSTORY(ADMIN)
 assignees: ''
 
