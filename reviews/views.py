@@ -7,6 +7,7 @@ from django.core.paginator import Paginator
 from django.urls import reverse
 
 from .models import GameReview
+from .forms import CreateReview
 
 def index(request):
     return render(request, 'reviews/index.html')
@@ -37,3 +38,32 @@ def review_detail(request, gamereview_id):
     }
 
     return render(request, 'reviews/review_detail.html', context)
+
+
+@login_required
+def create_review(request):
+    """
+    Logged in users will be able to create an event with the use
+    of the `EventCreationForm` which uses fields from the
+    `EventModel` form. Once an event has been created, it will
+    be put up for review by an admin and redirect the user back
+    to the home page.
+    """
+    if request.method == 'POST':
+        form = CreateReview(request.POST)
+        if form.is_valid():
+            reivew = form.save(commit=False)
+            review.author = request.user
+            review.save()
+
+            messages.success(request, "Your review has been submitted and is pending approval.")  
+
+            return redirect('index')
+    else:
+        form = CreateReview()
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'reviews/create_review.html', context)
