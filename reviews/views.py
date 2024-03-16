@@ -47,13 +47,14 @@ def create_review(request):
     if request.method == 'POST':
         form = CreateReview(request.POST)
         if form.is_valid():
-            reivew = form.save(commit=False)
+            review = form.save(commit=False)
             review.author = request.user
             review.save()
+            form.save_m2m()
 
             messages.success(request, "Your review has been submitted and is pending approval.")  
 
-            return redirect('index')
+            return redirect('home')
     else:
         form = CreateReview()
 
