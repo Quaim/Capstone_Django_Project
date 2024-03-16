@@ -4,4 +4,17 @@
 {% block content %}
 
 Review Detail page working
+{% if user == gamereview.author or user.is_superuser %}
+        
+                
+                    {% if user == gamereview.author %}
+                    <a href="{% url 'edit-review' gamereview.id %}" class="btn">
+                        Edit
+                    </a>
+                    {% endif %}
+              
+
+        
+        {% endif %}
+        
 {% endblock %}

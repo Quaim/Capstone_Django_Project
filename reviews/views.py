@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 from django.urls import reverse
 
 from .models import GameReview
-from .forms import CreateReview
+from .forms import CreateReview, EditReview
 
 def index(request):
     return render(request, 'reviews/index.html')
@@ -45,7 +45,7 @@ def create_review(request):
     to the home page.
     """
     if request.method == 'POST':
-        form = CreateReview(request.POST)
+        form = CreateReview(request.POST, request.FILES)
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user
@@ -63,3 +63,30 @@ def create_review(request):
     }
 
     return render(request, 'reviews/create_review.html', context)
+
+
+@login_required
+def edit_review(request, gamereview_id):
+    review = get_object_or_404(GameReview, pk=gamereview_id, author=request.user)
+    if review.author != request.user:
+        messages.error(request, 'Access denied. Please try again.')
+        return redirect('home')
+    # user matches the book user / proceed
+    form = EditReview(request.POST or None, request.FILES, instance=review)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.instance.user = request.user
+            review.approved = False
+            form.save()
+            # form.save_m2m()
+
+            messages.success(request, 'Review successfuly updated and it now up for approval by admin')
+            return redirect('home')
+        messages.error(request, 'An error occurred. Please try again.')
+    form = EditReview(instance=review)
+    template = 'reviews/edit_review.html'
+    context = {
+        'form': form,
+        'review': review
+    }
+    return render(request, template, context)
