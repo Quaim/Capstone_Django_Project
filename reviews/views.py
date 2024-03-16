@@ -23,11 +23,7 @@ class AllReviews(generic.ListView):
 def review_detail(request, gamereview_id):
     """
     The purpose of this view is to display the full details of
-    a particular review. Reviews for the selected event will
-    also be shown at the bottom of the current event details.
-    Providing the currently logged in user isn't the user who
-    created the event, they can also submit a new review which
-    will be put up for approval by an admin.
+    a particular review. 
     """
     gamereview = get_object_or_404(GameReview, pk=gamereview_id)
     

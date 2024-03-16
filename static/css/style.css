@@ -72,3 +72,11 @@ p {
 html, body {
     height: 100%;
 }
+
+/* ACTIVE PAGE */
+
+.activepage {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #036977;
+  }
