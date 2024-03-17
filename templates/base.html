@@ -5,6 +5,7 @@
 {% url 'account_logout' as logout_url %}
 {% url 'home' as home_url %}
 {% url 'about' as about_url %}
+{% url 'profile' as profile_url %}
 {% url 'all-reviews' as all_reviews_url %}
 {% url 'create-review' as create_review_url %}
 
@@ -50,7 +51,8 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white {% if request.path == home_url %}activepage{%endif%}" aria-current="" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link text-white {% if request.path == home_url %}activepage{%endif%}"
+                            aria-current="" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == all_reviews_url %}activepage{%endif%}
@@ -68,16 +70,23 @@
                             aria-current="page" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link text-white {% if request.path == create_review_url %}activepage{%endif%}" aria-current="" href="{% url 'create-review' %}">Create Review</a>
-                        </li>
+                        <a class="nav-link text-white {% if request.path == create_review_url %}activepage{%endif%}"
+                            aria-current="" href="{% url 'create-review' %}">Create Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if request.path == profile_url %}activepage{%endif%}"
+                            aria-current="" href="{% url 'profile' %}">Profile</a>
+                    </li>
 
                     {% else %}
 
                     <li class="nav-item">
-                        <a class="nav-link text-white {% if request.path == signup_url %}activepage{%endif%}" aria-current="" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link text-white {% if request.path == signup_url %}activepage{%endif%}"
+                            aria-current="" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white {% if request.path == login_url %}activepage{%endif%}" aria-current="" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link text-white {% if request.path == login_url %}activepage{%endif%}"
+                            aria-current="" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                     <form class="d-flex text-center" method="GET" role="search" action="">
@@ -85,7 +94,7 @@
                         <button class="btn btn-outline-primary bg-green1 text-white" type="submit">Search</button>
                     </form>
                 </ul>
-                
+
             </div>
         </div>
     </nav>

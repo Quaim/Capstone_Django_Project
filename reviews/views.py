@@ -12,8 +12,12 @@ from .forms import CreateReview, EditReview
 def index(request):
     return render(request, 'reviews/index.html')
 
+
 def about(request):
     return render(request, 'reviews/about.html')
+
+def profile(request):
+    return render(request, 'reviews/profile.html')
 
 class AllReviews(generic.ListView):
     queryset = GameReview.objects.filter(approved=True)
@@ -34,6 +38,32 @@ def review_detail(request, gamereview_id):
     }
 
     return render(request, 'reviews/review_detail.html', context)
+
+@login_required
+def user_approved_reviews(request):
+    """
+    This view will display all approved reviews by the current
+    user on the 'approved_reviews.html' template. With the use of a
+    filter, only the current user's approved reviews will be displayed
+    here.
+    """
+    approved_reviews = GameReview.objects.filter(author=request.user, approved=True)
+
+    context = {
+        'approved_reviews': approved_reviews
+    }
+
+    return render(request, 'reviews/approved_reviews.html', context)
+
+
+# class UserApprovedReviews(generic.ListView):
+#     queryset = GameReview.objects.filter(approved=True, author=request.user)
+#     template_name = "reviews/user_approved_reviews.html"
+#     paginate_by = 6
+
+
+
+
 
 
 @login_required

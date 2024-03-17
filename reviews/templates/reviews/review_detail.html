@@ -33,10 +33,10 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     {% endif %}</p>
-                                <p><h3>Tags: </h3>{% for tag in gamereview.tags.all %}
+                                <p><h5>Tags: </h5>{% for tag in gamereview.tags.all %}
                                 {{tag}},
                                 {% endfor %}</p>
-                                <p><h3>Platforms: </h3>
+                                <p><h5>Platforms: </h5>
                                 {% for platform in gamereview.platforms.all %}
                                 {{platform}},
                                 {% endfor %}</p>
@@ -45,7 +45,7 @@
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder image">
                 {% else %}
-                <img src="{{ gamereview.featured_image.url }}" class="scale" alt="{{ gamereview.title }}">
+                <img src="{{ gamereview.featured_image.url }}" class="img-fluid" alt="{{ gamereview.title }}">
                 {% endif %}
             </div>
         </div>
