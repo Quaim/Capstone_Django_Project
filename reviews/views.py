@@ -69,7 +69,7 @@ def create_review(request):
 def edit_review(request, gamereview_id):
     review = get_object_or_404(GameReview, pk=gamereview_id, author=request.user)
     if review.author != request.user:
-        messages.error(request, 'Access denied. Please try again.')
+        messages.error(request, 'Access denied. Please make sure this is a review you created.')
         return redirect('home')
     # user matches the book user / proceed
     form = EditReview(request.POST or None, request.FILES, instance=review)
@@ -80,7 +80,7 @@ def edit_review(request, gamereview_id):
             form.save()
             # form.save_m2m()
 
-            messages.success(request, 'Review successfuly updated and it now up for approval by admin')
+            messages.success(request, 'Review successfuly updated and is now up for approval by an admin')
             return redirect('home')
         messages.error(request, 'An error occurred. Please try again.')
     form = EditReview(instance=review)
@@ -90,3 +90,22 @@ def edit_review(request, gamereview_id):
         'review': review
     }
     return render(request, template, context)
+
+@login_required
+def delete_review(request, gamereview_id):
+    """
+    Users can also delete their booked events should they feel
+    the desire to no longer attend. `booked_event` will ensure that
+    the the logged in user is the user making the request, and that
+    the booking being deleted is the booking which was created.
+    """
+    review = get_object_or_404(GameReview, pk=gamereview_id, author=request.user)
+    if review.author != request.user:
+        messages.error(request, 'Access denied. Please make sure this is a review you created.')
+        return redirect('home')  
+
+    
+    review.delete()
+    messages.success(request, f'{review.title} Review by {review.author} deleted successfully.')  
+
+    return redirect('home')
