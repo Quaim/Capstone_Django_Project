@@ -94,18 +94,29 @@ def edit_review(request, gamereview_id):
 @login_required
 def delete_review(request, gamereview_id):
     """
-    Users can also delete their booked events should they feel
-    the desire to no longer attend. `booked_event` will ensure that
-    the the logged in user is the user making the request, and that
-    the booking being deleted is the booking which was created.
-    """
-    review = get_object_or_404(GameReview, pk=gamereview_id, author=request.user)
-    if review.author != request.user:
-        messages.error(request, 'Access denied. Please make sure this is a review you created.')
-        return redirect('home')  
+   A logged in user has the ability to delete their own
+    event. A superuser has the ability to delete any event,
+    enabling them to keep the site clean of redundant events.
 
-    
-    review.delete()
-    messages.success(request, f'{review.title} Review by {review.author} deleted successfully.')  
+    Should a user attempt to perform this functionality and they
+    aren't a superuser/the user who created the event, they will
+    receive an error message.
+    """
+    review = get_object_or_404(GameReview, pk=gamereview_id)
+
+    if request.user == review.author or request.user.is_superuser:
+        review.delete()
+        messages.success(request, f"{review.title} successfully deleted.")
+
+    else:
+        messages.error(request, "You don't have permission to delete that event.")  
 
     return redirect('home')
+   
+   
+   
+   
+   
+   
+   
+   

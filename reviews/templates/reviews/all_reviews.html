@@ -23,10 +23,10 @@
                                     alt="{{ gamereview.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ gamereview.author }}</p>
+                                    <p class="author">Review By: {{ gamereview.author }}</p>
                                     <p>{% if gamereview.rating == 1 %}
                                         <i class="fa-solid fa-star"></i>
-                                        {% elif review.review_score == 2 %}
+                                        {% elif gamereview.rating == 2 %}
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
                                         {% elif gamereview.rating == 3 %}

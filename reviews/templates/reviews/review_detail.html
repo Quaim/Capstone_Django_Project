@@ -3,20 +3,49 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="">
+<div class="masthead">
     <div class="container">
         <div class="row g-0">
-            <div class="col-md-6">
+            <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ gamereview.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ gamereview.author }} | {{ gamereview.created_on }}</p>
-            </div>
+                <p class="post-subtitle">Review By - {{ gamereview.author }} | {{ gamereview.created_on }}</p>
+                <p class="card-text">Author Rating - 
+                    {% if gamereview.rating == 1 %}
+                    <i class="fa-solid fa-star"></i>
+                    {% elif gamereview.rating == 2 %}
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    {% elif gamereview.rating == 3 %}
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    {% elif gamereview.rating == 4 %}
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    {% elif gamereview.rating == 5 %}
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    {% endif %}</p>
+                                <p><h3>Tags: </h3>{% for tag in gamereview.tags.all %}
+                                {{tag}},
+                                {% endfor %}</p>
+                                <p><h3>Platforms: </h3>
+                                {% for platform in gamereview.platforms.all %}
+                                {{platform}},
+                                {% endfor %}</p>
+            </div>                
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder image">
                 {% else %}
-                <img src="{{ gamereview.featured_image.url }}" class="img-fluid" alt="{{ gamereview.title }}">
+                <img src="{{ gamereview.featured_image.url }}" class="scale" alt="{{ gamereview.title }}">
                 {% endif %}
             </div>
         </div>
