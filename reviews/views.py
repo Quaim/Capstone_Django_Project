@@ -30,14 +30,12 @@ def search_reviews(request):
     template = 'reviews/search_result.html'
 
     if request.method == 'POST':
-        search_result = request.POST['searchform']
-
-        search_results = GameReview.objects.filter(Q(title__icontains=search_result) | Q(genre__name__icontains=search_result) | Q(tags__name__icontains=search_result)
-         | Q(platforms__name__icontains=search_result))
-        context = {
-        'search_results': search_results,
+        search_result = request.POST.get('searchform', default="")
+        # search_result = request.POST.get('searchform', default="")
+        print(request.POST)
+        search_results = GameReview.objects.filter(title__icontains=search_result)
         
-    }
+        context = {'search_results': search_results,}
         if not search_result:
              messages.success(request, "No Reviews containing your query exist, please check spelling just incase")
              return render(request, template)
@@ -46,7 +44,7 @@ def search_reviews(request):
     
     
 
-    return render(request, template, context)
+    # return render(request, template, context)
 
     
 

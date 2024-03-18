@@ -24,7 +24,7 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Review By: {{ gamereview.author }}</p>
-                                    <p>{% if gamereview.rating == 1 %}
+                                    <p>Rating: {% if gamereview.rating == 1 %}
                                         <i class="fa-solid fa-star"></i>
                                         {% elif gamereview.rating == 2 %}
                                         <i class="fa-solid fa-star"></i>
@@ -47,20 +47,21 @@
                                         {% endif %}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'review-detail' gamereview.pk %}" class="post-link">
-                                <h2 class="card-title">{{ gamereview.title }}</h2>
+                            
+                                <h2 class="card-title">Title: {{ gamereview.title }}</h2>
                                 <p class="card-text">{{ gamereview.description }}</p>
-                                {% for tag in gamereview.tags.all %}
+                                <p>Tags: {% for tag in gamereview.tags.all %}
                                 {{tag}},
-                                {% endfor %}
-                                {% for platform in gamereview.platforms.all %}
+                                {% endfor %}</p>
+                                <p>Platforms: {% for platform in gamereview.platforms.all %}
                                 {{platform}},
-                                {% endfor %}
-                            </a>
+                                {% endfor %}</p>
+                            
 
-                            <hr />
-                            <p class="card-text text-muted h6">{{ gamereview.created_on}}
+                            <hr/>
+                            <p class="card-text text-muted h6">{{ gamereview.created_on}}        
                             </p>
+                            <p class="text-center"><a href="{% url 'review-detail' gamereview.pk %}" class="btn btn-success w-25">Full Review</a></p>
                         </div>
                     </div>
                 </div>
