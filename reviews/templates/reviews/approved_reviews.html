@@ -2,7 +2,75 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
+<div class="container-fluid">
+    <div class="row">
 
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for approved_review in approved_reviews %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img class="card-img-top" src="{% static 'images/default.jpg' %}"
+                                    alt="placeholder image">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ approved_review.featured_image.url }}"
+                                    alt="{{ approved_review.title }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author">Review By: {{ approved_review.author }}</p>
+                                    <p>{% if approved_review.rating == 1 %}
+                                        <i class="fa-solid fa-star"></i>
+                                        {% elif approved_review.rating == 2 %}
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        {% elif approved_review.rating == 3 %}
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        {% elif approved_review.rating == 4 %}
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        {% elif approved_review.rating == 5 %}
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        {% endif %}</p>
+                                </div>
+                            </div>
+                            <a href="{% url 'review-detail' approved_review.pk %}" class="post-link">
+                                <h2 class="card-title">{{ approved_review.title }}</h2>
+                                <p class="card-text">{{ approved_review.description }}</p>
+                                {% for tag in approved_review.tags.all %}
+                                {{tag}},
+                                {% endfor %}
+                                {% for platform in approved_review.platforms.all %}
+                                {{platform}},
+                                {% endfor %}
+                            </a>
+
+                            <hr />
+                            <p class="card-text text-muted h6">{{ approved_review.created_on}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 
