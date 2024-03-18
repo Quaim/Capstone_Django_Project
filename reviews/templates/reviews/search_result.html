@@ -8,35 +8,35 @@
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for unapproved_review in unapproved_reviews %}
+                {% for search_result in search_results %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in unapproved_review.featured_image.url %}
+                                {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ unapproved_review.featured_image.url }}"
-                                    alt="{{ unapproved_review.title }}">
+                                <img class="card-img-top" src=" {{ search_result.featured_image.url }}"
+                                    alt="{{ search_result.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Review By: {{ unapproved_review.author }}</p>
-                                    <p>{% if unapproved_review.rating == 1 %}
+                                    <p class="author">Review By: {{ search_result.author }}</p>
+                                    <p>{% if search_result.rating == 1 %}
                                         <i class="fa-solid fa-star"></i>
-                                        {% elif unapproved_review.rating == 2 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif unapproved_review.rating == 3 %}
+                                        {% elif search_result.rating == 2 %}
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif unapproved_review.rating == 4 %}
+                                        {% elif search_result.rating == 3 %}
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
+                                        {% elif search_result.rating == 4 %}
                                         <i class="fa-solid fa-star"></i>
-                                        {% elif unapproved_review.rating == 5 %}
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        {% elif search_result.rating == 5 %}
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
                                         <i class="fa-solid fa-star"></i>
@@ -45,19 +45,19 @@
                                         {% endif %}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'review-detail' unapproved_review.pk %}" class="post-link">
-                                <h2 class="card-title">{{ unapproved_review.title }}</h2>
-                                <p class="card-text">{{ unapproved_review.description }}</p>
-                                {% for tag in unapproved_review.tags.all %}
+                            <a href="{% url 'review-detail' approved_review.pk %}" class="post-link">
+                                <h2 class="card-title">{{ search_result.title }}</h2>
+                                <p class="card-text">{{ search_result.description }}</p>
+                                {% for tag in search_result.tags.all %}
                                 {{tag}},
                                 {% endfor %}
-                                {% for platform in unapproved_review.platforms.all %}
+                                {% for platform in search_result.platforms.all %}
                                 {{platform}},
                                 {% endfor %}
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ unapproved_review.created_on}}
+                            <p class="card-text text-muted h6">{{ search_result.created_on}}
                             </p>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ from .models import GameReview, Tag, Platform
 
 
 
-class CreateReview(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
     """
     A form to allow users to create a game review.
     """
@@ -30,28 +30,28 @@ class CreateReview(forms.ModelForm):
             'featured_image',
         ]
 
-class EditReview(forms.ModelForm):
-    """
-    A form to allow users to create a game review.
-    """
-    platforms = forms.ModelMultipleChoiceField(
-        queryset = Platform.objects.all().order_by("name"),
-        widget = forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),
-    )
-    tags = forms.ModelMultipleChoiceField(
-        queryset = Tag.objects.all().order_by("name"),
-        widget = forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),
-    )
+# class EditReview(forms.ModelForm):
+#     """
+#     A form to allow users to create a game review.
+#     """
+#     platforms = forms.ModelMultipleChoiceField(
+#         queryset = Platform.objects.all().order_by("name"),
+#         widget = forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),
+#     )
+#     tags = forms.ModelMultipleChoiceField(
+#         queryset = Tag.objects.all().order_by("name"),
+#         widget = forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),
+#     )
 
-    class Meta:
-        model = GameReview
-        fields = [
-            'title',
-            'description',
-            'genre',
-            'tags',
-            'platforms',
-            'review',
-            'rating',
-            'featured_image',
-        ]
+#     class Meta:
+#         model = GameReview
+#         fields = [
+#             'title',
+#             'description',
+#             'genre',
+#             'tags',
+#             'platforms',
+#             'review',
+#             'rating',
+#             'featured_image',
+#         ]
