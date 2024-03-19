@@ -153,9 +153,9 @@ def review_approval(request, pending_review_id):
             pending_review.save()
             messages.success(request, f'Review {pending_review.title} has been approved.')  # noqa
 
-        elif action == 'reject':
-            pending_review.delete()
-            messages.success(request, 'Review has been rejected and deleted.')
+        # elif action == 'reject':
+        #     pending_review.delete()
+        #     messages.success(request, 'Review has been rejected and deleted.')
 
         return redirect('pending-reviews')
 
