@@ -10,8 +10,7 @@ from django.urls import reverse
 from .models import GameReview
 from .forms import ReviewForm
 
-def handling_404(rquest, exception):
-    return render(request, '404.html')
+
 
 def index(request):
     return render(request, 'reviews/index.html')

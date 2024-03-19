@@ -25,4 +25,3 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
 ]
 
-handler404 = 'reviews.views.handling_404'

@@ -94,7 +94,7 @@
             </div>
         </div>
         {% endif %}
-        {% if not gamereview.approved and request.user.is_superuser %}
+        {% if not review.approved and request.user.is_superuser %}
         <form method="POST" action="{% url 'review-approval' review.pk %}">
             {% csrf_token %}
             <button class="btn bg-green1 text-white" type="submit" name="action"
