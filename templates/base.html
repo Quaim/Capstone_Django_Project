@@ -96,9 +96,9 @@
                             aria-current="" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
-                    <form name="search_form" class="d-flex text-center" method="POST" role="search"
+                    <form class="d-flex text-center" method="get" role="search"
                         action="{% url 'search-results' %}">
-                        {% csrf_token %}
+                        
                         <input class="form-control me-2" type="search" placeholder="Search Reviews" name="searchform" aria-label="Search">
                         <button class="btn btn-outline-primary bg-green1 text-white" type="submit">Search</button>
                     </form>

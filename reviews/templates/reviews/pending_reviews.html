@@ -54,6 +54,7 @@
                             <p>Platforms: {% for platform in pending_review.platforms.all %}
                                 {{platform}},
                                 {% endfor %}</p>
+                                <p>Genre: {{ pending_review.genre }}</p>
 
                             <hr />
                             <p class="card-text text-muted h6">{{ pending_review.created_on}}

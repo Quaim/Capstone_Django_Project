@@ -22,7 +22,7 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Review By: {{ unapproved_review.author }}</p>
-                                    <p>{% if unapproved_review.rating == 1 %}
+                                    <p>Rating: {% if unapproved_review.rating == 1 %}
                                         <i class="fa-solid fa-star"></i>
                                         {% elif unapproved_review.rating == 2 %}
                                         <i class="fa-solid fa-star"></i>
@@ -53,6 +53,7 @@
                             <p>Platforms: {% for platform in unapproved_review.platforms.all %}
                             {{platform}},
                             {% endfor %}</p>
+                            <p>Genre: {{ unapproved_review.genre }}</p>
                         
                         <hr />
                         <p class="card-text text-muted h6">{{ unapproved_review.created_on}}
@@ -68,8 +69,10 @@
             </div>
             <div class="row">
                 {% endif %}
+                {% empty %}
+                You have no reviews that are unapproved.
                 {% endfor %}
-
+                
             </div>
         </div>
     </div>

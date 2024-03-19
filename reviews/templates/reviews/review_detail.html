@@ -74,7 +74,10 @@
         <div class="text-center my-3">
             <a href="{% url 'edit-review' gamereview.id %}" class="btn btn-success w-25">Edit</a>
             {% endif %}
+
             {% if user == gamereview.author or user.is_superuser %}
+
+           
             <a href="#" class="btn btn-success w-25" data-bs-toggle="modal"
                 data-bs-target="#delete-review-{{ gamereview.id }}">Delete</a>
            
@@ -103,6 +106,15 @@
                 </div>
             </div>
         </div>
+        {% endif %}
+        {% if not gamereview.approved and request.user.is_superuser %}
+        <form method="POST" action="{% url 'review-approval' gamereview.pk %}">
+            {% csrf_token %}
+            <button class="btn bg-green1 text-white" type="submit" name="action"
+                value="approve">Approve</button>
+            <button class="btn bg-green1 text-white" type="submit" name="action"
+                value="reject">Reject</button>
+        </form>
         {% endif %}
     </div>
 

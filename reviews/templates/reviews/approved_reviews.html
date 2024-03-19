@@ -22,7 +22,7 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Review By: {{ approved_review.author }}</p>
-                                    <p>{% if approved_review.rating == 1 %}
+                                    <p>Rating: {% if approved_review.rating == 1 %}
                                         <i class="fa-solid fa-star"></i>
                                         {% elif approved_review.rating == 2 %}
                                         <i class="fa-solid fa-star"></i>
@@ -53,6 +53,7 @@
                                 <p>Platforms: {% for platform in approved_review.platforms.all %}
                                 {{platform}},
                                 {% endfor %}</p>
+                                <p>Genre: {{ approved_review.genre }}</p>
                             
                             <hr />
                             <p class="card-text text-muted h6">{{ approved_review.created_on}}
