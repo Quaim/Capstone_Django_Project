@@ -20,8 +20,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
-    <link rel="icon" type="image/png"  href="{% static 'images/favicon/favicon.ico' %}">
-    
+    <link rel="icon" type="image/png" href="{% static 'images/favicon/favicon.ico' %}">
+
 
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -96,13 +96,26 @@
                             aria-current="" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
-                    <form class="d-flex text-center" method="get" role="search"
-                        action="{% url 'search-results' %}">
-                        
-                        <input class="form-control me-2" type="search" placeholder="Search Reviews" name="searchform" aria-label="Search">
+                    {% if request.user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="" href="{% url 'admin:index' %}" target="_blank"
+                            rel="noopener"><i class="fas fa-star fa-fw fa-md text-warning"
+                                aria-hidden="true"></i>Admin</a>
+                    </li>
+                    {% endif %}
+                    <form class="d-flex text-center" method="get" role="search" action="{% url 'search-results' %}">
+
+                        <input class="form-control me-2" type="search" placeholder="Search Reviews" name="searchform"
+                            aria-label="Search">
                         <button class="btn btn-outline-primary bg-green1 text-white" type="submit">Search</button>
                     </form>
+                    
                 </ul>
+                {% if user.is_authenticated %}
+                <p class="text-end m3 text-white">You are logged in as <strong>{{user}}</strong></p>
+                {% else %}
+                <p class="text-end m3">You are not logged in</p>
+                {% endif %}
 
             </div>
         </div>

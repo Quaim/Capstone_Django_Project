@@ -62,16 +62,16 @@ def search_reviews(request):
 
 
 
-def review_detail(request, gamereview_id):
+def review_detail(request, review_id):
     """
     The purpose of this view is to display the full details of
     a particular review. 
     """
-    gamereview = get_object_or_404(GameReview, pk=gamereview_id)
+    review = get_object_or_404(GameReview, pk=review_id)
     
 
     context = {
-        'gamereview': gamereview,
+        'review': review,
         
     }
 
@@ -202,8 +202,8 @@ def create_review(request):
 
 
 @login_required
-def edit_review(request, gamereview_id):
-    review = get_object_or_404(GameReview, pk=gamereview_id)
+def edit_review(request, review_id):
+    review = get_object_or_404(GameReview, pk=review_id)
     if review.author != request.user:
         messages.error(request, 'Access denied. Please make sure this is a review you created.')
         return redirect('home')
@@ -228,7 +228,7 @@ def edit_review(request, gamereview_id):
     return render(request, template, context)
 
 @login_required
-def delete_review(request, gamereview_id):
+def delete_review(request, review_id):
     """
    A logged in user has the ability to delete their own
     review. A superuser has the ability to delete any review,
@@ -238,7 +238,7 @@ def delete_review(request, gamereview_id):
     aren't a superuser/the user who created the review, they will
     receive an error message.
     """
-    review = get_object_or_404(GameReview, pk=gamereview_id)
+    review = get_object_or_404(GameReview, pk=review_id)
 
     if request.user == review.author or request.user.is_superuser:
         review.delete()
