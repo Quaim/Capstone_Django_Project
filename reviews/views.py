@@ -195,7 +195,7 @@ def edit_review(request, gamereview_id):
     if review.author != request.user:
         messages.error(request, 'Access denied. Please make sure this is a review you created.')
         return redirect('home')
-    # user matches the book user / proceed
+    # user matches the review author / proceed
     form = ReviewForm(request.POST or None, request.FILES, instance=review)
     if request.method == 'POST':
         if form.is_valid():
