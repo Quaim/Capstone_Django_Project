@@ -121,3 +121,17 @@ html, body {
     transform: skew(15deg);
     z-index: 100;
 }
+
+
+.btn-1{
+    border-radius: 0.375rem;
+
+}
+
+.btn-1:hover {
+    background-color: #e71a36;
+}
+
+.btn:hover {
+    background-color: #312f30 !important;
+}

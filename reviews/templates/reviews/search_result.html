@@ -13,7 +13,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
+                                {% if "placeholder" in search_result.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
@@ -45,7 +45,7 @@
                                         {% endif %}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'review-detail' approved_review.pk %}" class="post-link">
+                            <a href="{% url 'review-detail' search_result.pk %}" class="post-link">
                                 <h2 class="card-title">{{ search_result.title }}</h2>
                                 <p class="card-text">{{ search_result.description }}</p>
                                 {% for tag in search_result.tags.all %}

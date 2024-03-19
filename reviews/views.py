@@ -30,10 +30,10 @@ def search_reviews(request):
     template = 'reviews/search_result.html'
 
     if request.method == 'POST':
-        search_result = request.POST.get('searchform', default="")
+        search_result = request.POST['searchform']
         # search_result = request.POST.get('searchform', default="")
         print(request.POST)
-        search_results = GameReview.objects.filter(title__icontains=search_result)
+        search_results = GameReview.objects.filter(Q(title__icontains=search_result), approved=True)
         
         context = {'search_results': search_results,}
         if not search_result:
