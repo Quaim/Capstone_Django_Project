@@ -7,76 +7,52 @@
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for pending_review in pending_reviews %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                {% for review in pending_reviews %}
+                <div class="col">
+                    <div class="card h-100 mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in pending_review.featured_image.url %}
+                                {% if "placeholder" in review.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ pending_review.featured_image.url }}"
-                                    alt="{{ pending_review.title }}">
+                                <img class="card-img-top" src=" {{ review.featured_image.url }}"
+                                    alt="{{ review.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Review By: {{ pending_review.author }}</p>
-                                    <p>Rating: {% if pending_review.rating == 1 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif pending_review.rating == 2 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif pending_review.rating == 3 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif pending_review.rating == 4 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif pending_review.rating == 5 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% endif %}</p>
+                                    <p class="author">Review By: {{ review.author }}</p>
+                                    <p> Rating: {% spaceless %}
+                                        {% for star in "12345"|make_list %}
+                                        {% if forloop.counter <= review.rating|add:"0" %}
+                                        <i class="fas fa-star fa-fw fa-lg text-warning" aria-hidden="true"></i>
+                                        {% else %}
+                                        <i class="fas fa-star fa-fw fa-lg text-muted" aria-hidden="true"></i>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endspaceless %}</p>
                                 </div>
                             </div>
-
-                            <h2 class="card-title">Title: {{ pending_review.title }}</h2>
-                            <p class="card-text">{{ pending_review.description }}</p>
-                            <p>Tags: {% for tag in pending_review.tags.all %}
+                            <h2 class="card-title">Title: {{ review.title }}</h2>
+                            <p class="card-text">{{ review.description }}</p>
+                            <p>Tags: {% for tag in review.tags.all %}
                                 {{tag}},
                                 {% endfor %}</p>
-                            <p>Platforms: {% for platform in pending_review.platforms.all %}
+                            <p>Platforms: {% for platform in review.platforms.all %}
                                 {{platform}},
                                 {% endfor %}</p>
-                                <p>Genre: {{ pending_review.genre }}</p>
-
+                            <p>Genre: {{ review.genre }}</p>
                             <hr />
-                            <p class="card-text text-muted h6">{{ pending_review.created_on}}
+                            <p class="card-text text-muted h6">{{ review.created_on}}
                             </p>
-                            <p class="text-center"><a href="{% url 'review-detail' pending_review.pk %}"
+                            <p class="text-center"><a href="{% url 'review-detail' review.pk %}"
                                     class="btn btn-success w-25">Full Review</a></p>
-                            <form method="POST" action="{% url 'review-approval' pending_review.pk %}">
-                                {% csrf_token %}
-                                <button class="btn bg-green1 text-white" type="submit" name="action"
-                                    value="approve">Approve</button>
-                                <button class="btn bg-green1 text-white" type="submit" name="action"
-                                    value="reject">Reject</button>
-                            </form>
-
-
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
+
+                {% empty %}
+                <div class="col">No Reviews containing your query exist, please check spelling just incase</div>
                 {% endfor %}
 
             </div>

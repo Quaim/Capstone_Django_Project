@@ -5,53 +5,52 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Blog Entries Column -->
+        <!-- Review Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-                {% for search_result in search_results %}
+                {% for review in search_results %}
                 <div class="col">
                     <div class="card h-100 mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in search_result.featured_image.url %}
+                                {% if "placeholder" in review.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ search_result.featured_image.url }}"
-                                    alt="{{ search_result.title }}">
+                                <img class="card-img-top" src=" {{ review.featured_image.url }}"
+                                    alt="{{ review.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Review By: {{ search_result.author }}</p>
-                                    <p> Rating:  {% spaceless %}
+                                    <p class="author">Review By: {{ review.author }}</p>
+                                    <p> Rating: {% spaceless %}
                                         {% for star in "12345"|make_list %}
-                                            {% if forloop.counter <= search_result.rating|add:"0" %}
-                                                <i class="fas fa-star fa-fw fa-lg text-warning" aria-hidden="true"></i>
-                                            {% else %}
-                                                <i class="fas fa-star fa-fw fa-lg text-muted" aria-hidden="true"></i>
-                                            {% endif %}
+                                        {% if forloop.counter <= review.rating|add:"0" %}
+                                        <i class="fas fa-star fa-fw fa-lg text-warning" aria-hidden="true"></i>
+                                        {% else %}
+                                        <i class="fas fa-star fa-fw fa-lg text-muted" aria-hidden="true"></i>
+                                        {% endif %}
                                         {% endfor %}
-                                    {% endspaceless %}</p>
+                                        {% endspaceless %}</p>
                                 </div>
                             </div>
-                            <h2 class="card-title">Title: {{ search_result.title }}</h2>                                
-                            <p class="card-text">{{ search_result.description }}</p>
-                            <p>Tags: {% for tag in search_result.tags.all %}
-                            {{tag}},
-                            {% endfor %}</p>
-                            <p>Platforms: {% for platform in search_result.platforms.all %}
-                            {{platform}},
-                            {% endfor %}</p>
-                            <p>Genre: {{ search_result.genre }}</p>
-                        
-
-                        <hr/>
-                        <p class="card-text text-muted h6">{{ search_result.created_on}}        
-                        </p>
-                        <p class="text-center"><a href="{% url 'review-detail' search_result.pk %}" class="btn btn-success w-25">Full Review</a></p>
+                            <h2 class="card-title">Title: {{ review.title }}</h2>
+                            <p class="card-text">{{ review.description }}</p>
+                            <p>Tags: {% for tag in review.tags.all %}
+                                {{tag}},
+                                {% endfor %}</p>
+                            <p>Platforms: {% for platform in review.platforms.all %}
+                                {{platform}},
+                                {% endfor %}</p>
+                            <p>Genre: {{ review.genre }}</p>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ review.created_on}}
+                            </p>
+                            <p class="text-center"><a href="{% url 'review-detail' review.pk %}"
+                                    class="btn btn-success w-25">Full Review</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-               
+
                 {% empty %}
                 <div class="col">No Reviews containing your query exist, please check spelling just incase</div>
                 {% endfor %}
@@ -60,6 +59,4 @@
         </div>
     </div>
 
-{% endblock %}
-
-
+    {% endblock %}

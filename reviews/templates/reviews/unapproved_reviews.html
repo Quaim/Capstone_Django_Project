@@ -7,76 +7,56 @@
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for unapproved_review in unapproved_reviews %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+                {% for review in unapproved_reviews %}
+                <div class="col">
+                    <div class="card h-100 mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in unapproved_review.featured_image.url %}
+                                {% if "placeholder" in review.featured_image.url %}
                                 <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ unapproved_review.featured_image.url }}"
-                                    alt="{{ unapproved_review.title }}">
+                                <img class="card-img-top" src=" {{ review.featured_image.url }}"
+                                    alt="{{ review.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Review By: {{ unapproved_review.author }}</p>
-                                    <p>Rating: {% if unapproved_review.rating == 1 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif unapproved_review.rating == 2 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif unapproved_review.rating == 3 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif unapproved_review.rating == 4 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% elif unapproved_review.rating == 5 %}
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        {% endif %}</p>
+                                    <p class="author">Review By: {{ review.author }}</p>
+                                    <p> Rating: {% spaceless %}
+                                        {% for star in "12345"|make_list %}
+                                        {% if forloop.counter <= review.rating|add:"0" %}
+                                        <i class="fas fa-star fa-fw fa-lg text-warning" aria-hidden="true"></i>
+                                        {% else %}
+                                        <i class="fas fa-star fa-fw fa-lg text-muted" aria-hidden="true"></i>
+                                        {% endif %}
+                                        {% endfor %}
+                                        {% endspaceless %}</p>
                                 </div>
                             </div>
-                            <h2 class="card-title">Title: {{ unapproved_review.title }}</h2>
-                            <p class="card-text">{{ unapproved_review.description }}</p>
-                            <p>Tags: {% for tag in unapproved_review.tags.all %}
-                            {{tag}},
-                            {% endfor %}</p>
-                            <p>Platforms: {% for platform in unapproved_review.platforms.all %}
-                            {{platform}},
-                            {% endfor %}</p>
-                            <p>Genre: {{ unapproved_review.genre }}</p>
-                        
-                        <hr />
-                        <p class="card-text text-muted h6">{{ unapproved_review.created_on}}
-                        </p>
-                        <p class="text-center"><a href="{% url 'review-detail' unapproved_review.pk %}" class="btn btn-success w-25">Full Review</a></p>
+                            <h2 class="card-title">Title: {{ review.title }}</h2>
+                            <p class="card-text">{{ review.description }}</p>
+                            <p>Tags: {% for tag in review.tags.all %}
+                                {{tag}},
+                                {% endfor %}</p>
+                            <p>Platforms: {% for platform in review.platforms.all %}
+                                {{platform}},
+                                {% endfor %}</p>
+                            <p>Genre: {{ review.genre }}</p>
+                            <hr />
+                            <p class="card-text text-muted h6">{{ review.created_on}}
+                            </p>
+                            <p class="text-center"><a href="{% url 'review-detail' review.pk %}"
+                                    class="btn btn-success w-25">Full Review</a></p>
+                        </div>
                     </div>
-
-                
-
                 </div>
-            </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
+
                 {% empty %}
-                You have no reviews that are unapproved.
+                <div class="col">No Reviews containing your query exist, please check spelling just incase</div>
                 {% endfor %}
-                
+
             </div>
         </div>
     </div>
 
-{% endblock %}
-
-
+    {% endblock %}
