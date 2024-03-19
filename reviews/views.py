@@ -124,7 +124,41 @@ def pending_reviews(request):
     return render(request, 'reviews/pending_reviews.html', context)
 
 
+@login_required
+def review_approval(request, pending_review_id):
+    """
+    For superusers only.
+    From the review approval list, a superuser can approve
+    or reject an review depending on the action of the button
+    which is clicked. The `approve` action button will approve
+    of an review. Similarly, the `reject` action button will
+    reject the review and delete it from the database permanently.
+    """
+    if not request.user.is_superuser:
+        return render(request, 'unauthorized.html')
 
+    pending_review = get_object_or_404(GameReview, pk=pending_review_id)
+
+    if request.method == 'POST':
+        action = request.POST.get('action', '')
+
+        if action == 'approve':
+            pending_review.approved = True
+            pending_review.save()
+            messages.success(request, f'Review {pending_review.title} has been approved.')  # noqa
+
+        elif action == 'reject':
+            pending_review.delete()
+            messages.success(request, 'Review has been rejected and deleted.')
+
+        return redirect('pending-reviews')
+
+    # If the request method is not POST, render the approval form
+    context = {
+        'pending_review': pending_review,
+    }
+
+    return render(request, 'reviews/review_approval.html', context)
 
 @login_required
 def create_review(request):
@@ -186,7 +220,7 @@ def delete_review(request, gamereview_id):
     """
    A logged in user has the ability to delete their own
     review. A superuser has the ability to delete any review,
-    enabling them to keep the site clean of redundant events.
+    enabling them to keep the site clean of redundant reviews.
 
     Should a user attempt to perform this functionality and they
     aren't a superuser/the user who created the review, they will

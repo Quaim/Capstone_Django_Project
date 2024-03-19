@@ -14,6 +14,8 @@ urlpatterns = [
     path('approved-reviews/', views.user_approved_reviews, name='approved-reviews'),
     path('unapproved-reviews/', views.user_unapproved_reviews, name='unapproved-reviews'),
     path('pending-reviews/', views.pending_reviews, name='pending-reviews'),
-    path('search-result/', views.search_reviews, name='search-results')
+    path('search-result/', views.search_reviews, name='search-results'),
+
+    path('pending-reviews/approve/<int:pending_review_id>/', views.review_approval, name='review-approval'),
 
 ]

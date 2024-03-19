@@ -45,20 +45,30 @@
                                         {% endif %}</p>
                                 </div>
                             </div>
-                            
-                                <h2 class="card-title">Title: {{ pending_review.title }}</h2>
-                                <p class="card-text">{{ pending_review.description }}</p>
-                                <p>Tags: {% for tag in pending_review.tags.all %}
+
+                            <h2 class="card-title">Title: {{ pending_review.title }}</h2>
+                            <p class="card-text">{{ pending_review.description }}</p>
+                            <p>Tags: {% for tag in pending_review.tags.all %}
                                 {{tag}},
                                 {% endfor %}</p>
-                                <p>Platforms: {% for platform in pending_review.platforms.all %}
+                            <p>Platforms: {% for platform in pending_review.platforms.all %}
                                 {{platform}},
                                 {% endfor %}</p>
-                            
+
                             <hr />
                             <p class="card-text text-muted h6">{{ pending_review.created_on}}
                             </p>
-                            <p class="text-center"><a href="{% url 'review-detail' pending_review.pk %}" class="btn btn-success w-25">Full Review</a></p>
+                            <p class="text-center"><a href="{% url 'review-detail' pending_review.pk %}"
+                                    class="btn btn-success w-25">Full Review</a></p>
+                            <form method="POST" action="{% url 'review-approval' pending_review.pk %}">
+                                {% csrf_token %}
+                                <button class="custom-btn custom-btn__primary" type="submit" name="action"
+                                    value="approve">Approve</button>
+                                <button class="custom-btn custom-btn__danger" type="submit" name="action"
+                                    value="reject">Reject</button>
+                            </form>
+
+
                         </div>
                     </div>
                 </div>
@@ -72,6 +82,4 @@
         </div>
     </div>
 
-{% endblock %}
-
-
+    {% endblock %}
