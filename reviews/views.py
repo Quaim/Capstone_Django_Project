@@ -28,10 +28,9 @@ class AllReviews(generic.ListView):
 
 def search_reviews(request):
     template = 'reviews/search_result.html'
-
     
     search_result = request.GET.get('searchform')
-        # search_result = request.POST.get('searchform', default="")
+       
     search_results = GameReview.objects.filter(approved=True).order_by('-rating')
     
     if search_result:
@@ -42,21 +41,18 @@ def search_reviews(request):
             Q(platforms__name__icontains=search_result)
         ).distinct()
         
-    # search_results = GameReview.objects.filter(Q(title__icontains=search_result) | Q(genre__name__icontains=search_result),  approved=True)
+    
     
     context = {
         'search_results': search_results,
         
     }
-    # if not search_result:
-    #         messages.success(request, "No Reviews containing your query exist, please check spelling just incase")
-    #         return render(request, template)
-    # else:
+    
     return render(request, template, context)     
     
     
 
-    # return render(request, template, context)
+    
 
     
 
@@ -96,9 +92,9 @@ def user_approved_reviews(request):
 @login_required
 def user_unapproved_reviews(request):
     """
-    This view will display all approved reviews by the current
-    user on the 'approved_reviews.html' template. With the use of a
-    filter, only the current user's approved reviews will be displayed
+    This view will display all unapproved reviews by the current
+    user on the 'unapproved_reviews.html' template. With the use of a
+    filter, only the current user's unapproved reviews will be displayed
     here.
     """
     unapproved_reviews = GameReview.objects.filter(author=request.user, approved=False)
@@ -110,10 +106,6 @@ def user_unapproved_reviews(request):
     return render(request, 'reviews/unapproved_reviews.html', context)
 
 
-# class UserApprovedReviews(generic.ListView):
-#     queryset = GameReview.objects.filter(approved=True, author=request.user)
-#     template_name = "reviews/user_approved_reviews.html"
-#     paginate_by = 6
 
 
 def pending_reviews(request):

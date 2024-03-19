@@ -109,13 +109,9 @@
                             aria-label="Search">
                         <button class="btn btn-outline-primary bg-green1 text-white" type="submit">Search</button>
                     </form>
-                    
+
                 </ul>
-                {% if user.is_authenticated %}
-                <p class="text-end m3 text-white">You are logged in as <strong>{{user}}</strong></p>
-                {% else %}
-                <p class="text-end m3">You are not logged in</p>
-                {% endif %}
+              
 
             </div>
         </div>
@@ -137,6 +133,12 @@
     {% endwith %}
 
     <main class="flex-shrink-0 main-bg">
+        
+        {% if user.is_authenticated %}
+        <p class="text-end m3 bg-green1">You are logged in as  <span class="text-white"><strong>{{user}}</strong></span></p>
+        {% else %}
+        <p class="text-end m3 bg-green1">You are not logged in</p>
+        {% endif %}
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}

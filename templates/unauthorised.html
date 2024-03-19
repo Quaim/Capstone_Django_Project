@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Unauthorised{% endblock %}
+
+{% block content %}
+
+<div class="row text-center">
+    <h2 class="unauthorized-info">
+        Sorry, you are not authorised to access this page.
+    </h2>
+    <p>Click <a href="{% url 'home' %}">Here </a>to return to the home page.</p>
+    <p>Or click <a href="{% url 'account_login' %}">Here</a> to log in.</p>
+    <div class="text-center">
+    <img class="img-fluid" src="{% static 'images/unauthorised.webp' %}" alt="">
+</div>
+</div>
+{% endblock %}
