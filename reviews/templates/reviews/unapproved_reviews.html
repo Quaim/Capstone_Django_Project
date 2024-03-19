@@ -45,23 +45,29 @@
                                         {% endif %}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'review-detail' unapproved_review.pk %}" class="post-link">
-                                <h2 class="card-title">{{ unapproved_review.title }}</h2>
-                                <p class="card-text">{{ unapproved_review.description }}</p>
-                                {% for tag in unapproved_review.tags.all %}
-                                {{tag}},
-                                {% endfor %}
-                                {% for platform in unapproved_review.platforms.all %}
-                                {{platform}},
-                                {% endfor %}
-                            </a>
-
-                            <hr />
-                            <p class="card-text text-muted h6">{{ unapproved_review.created_on}}
-                            </p>
-                        </div>
+                            <h2 class="card-title">Title: {{ unapproved_review.title }}</h2>
+                            <p class="card-text">{{ unapproved_review.description }}</p>
+                            <p>Tags: {% for tag in unapproved_review.tags.all %}
+                            {{tag}},
+                            {% endfor %}</p>
+                            <p>Platforms: {% for platform in unapproved_review.platforms.all %}
+                            {{platform}},
+                            {% endfor %}</p>
+                        
+                        <hr />
+                        <p class="card-text text-muted h6">{{ unapproved_review.created_on}}
+                        </p>
+                        <p class="text-center"><a href="{% url 'review-detail' unapproved_review.pk %}" class="btn btn-success w-25">Full Review</a></p>
                     </div>
+
+                    <!-- <form method="POST" action="{% url 'event-approval' unapproved_review.pk %}">
+                        {% csrf_token %}
+                        <button class="custom-btn custom-btn__primary" type="submit" name="action" value="approve">Approve</button>
+                        <button class="custom-btn custom-btn__danger" type="submit" name="action" value="reject">Reject</button>
+                    </form> -->
+
                 </div>
+            </div>
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">

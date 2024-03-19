@@ -104,6 +104,24 @@ def user_unapproved_reviews(request):
 #     paginate_by = 6
 
 
+def pending_reviews(request):
+    """
+    For superusers only.
+    Superusers can see which reviews need to be approved by displaying
+    unapproved reviews. If a user attempts to navigate to this page
+    and is not a superuser, they will be directed to a template,
+    `unauthorised.html`.
+    """
+    if not request.user.is_superuser:
+        return render(request, 'unauthorised.html')
+
+    pending_reviews = GameReview.objects.filter(approved=False)
+
+    context = {
+        'pending_reviews': pending_reviews,
+    }
+
+    return render(request, 'reviews/pending_reviews.html', context)
 
 
 

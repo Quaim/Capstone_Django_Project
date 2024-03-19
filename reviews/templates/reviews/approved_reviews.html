@@ -45,20 +45,19 @@
                                         {% endif %}</p>
                                 </div>
                             </div>
-                            <a href="{% url 'review-detail' approved_review.pk %}" class="post-link">
-                                <h2 class="card-title">{{ approved_review.title }}</h2>
+                            <h2 class="card-title">Title: {{ approved_review.title }}</h2>
                                 <p class="card-text">{{ approved_review.description }}</p>
-                                {% for tag in approved_review.tags.all %}
+                                <p>Tags: {% for tag in approved_review.tags.all %}
                                 {{tag}},
-                                {% endfor %}
-                                {% for platform in approved_review.platforms.all %}
+                                {% endfor %}</p>
+                                <p>Platforms: {% for platform in approved_review.platforms.all %}
                                 {{platform}},
-                                {% endfor %}
-                            </a>
-
+                                {% endfor %}</p>
+                            
                             <hr />
                             <p class="card-text text-muted h6">{{ approved_review.created_on}}
                             </p>
+                            <p class="text-center"><a href="{% url 'review-detail' approved_review.pk %}" class="btn btn-success w-25">Full Review</a></p>
                         </div>
                     </div>
                 </div>

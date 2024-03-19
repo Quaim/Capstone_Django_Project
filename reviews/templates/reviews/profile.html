@@ -12,5 +12,13 @@
   <div class="container text-center pt-3">
     <a href="{% url 'unapproved-reviews' %}" class="btn btn-success bg-green1 w-25">My Unapproved Reviews</a>
   </div>
+
+  {% if user.is_superuser %}
+  <div class="container text-center pt-3">
+    <a href="{% url 'pending-reviews' %}" class="btn btn-success bg-green1 w-25">Reviews Pending Approval</a>
+  </div>
+  {% endif %}
+
+
 </div>
 {% endblock %}
