@@ -81,7 +81,15 @@ html, body {
     text-decoration-color: #036977;
   }
 
+
+
+
 /* REVIEW DETAIL */
+
+.card {
+    border-color: #036977;
+  }
+
 
 .scale {
     width: 100%;
