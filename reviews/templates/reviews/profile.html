@@ -4,8 +4,13 @@
 {% block content %}
 
 <div class="container text-center pt-3">
-   Profile Page working
+   <h1>Welcome to your profile page, where you can access your approved and unapproved reviews</h1>
+   <hr>
+   {% if user.is_superuser %}
+   <h2>As you are an admin, you can also access reviews that are pending review here, and either approve or delete them</h2>
+   {% endif %}
 
+  
    <div class="container text-center pt-3">
     <a href="{% url 'approved-reviews' %}" class="btn btn-success w-25">My Approved Reviews</a>
   </div>

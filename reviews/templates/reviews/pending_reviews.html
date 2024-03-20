@@ -48,7 +48,7 @@
                             <p class="text-center"><a href="{% url 'review-detail' review.pk %}"
                                     class="btn btn-success w-25">Full Review</a></p>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center my-3">
                             <form method="POST" action="{% url 'review-approval' review.pk %}">
                                 {% csrf_token %}
                                 <button class="btn bg-green1 text-white" type="submit" name="action"
@@ -57,8 +57,8 @@
                             </form>
 
 
-                            <div>
-                                <a href="#" class="btn btn-success w-25" data-bs-toggle="modal"
+                            <div class="text center my-3">
+                                <a href="#" class="btn btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#delete-review-{{ review.id }}">Delete</a>
 
                             </div>

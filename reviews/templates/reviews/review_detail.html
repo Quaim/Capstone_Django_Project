@@ -32,7 +32,7 @@
                     {% endfor %}
                 </p>
             </div>
-            <div class="col-md-6 masthead-image">
+            <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in review.featured_image.url %}
                 <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder image">
                 {% else %}
@@ -68,13 +68,13 @@
         {% endif %}
         {% if request.user == review.author %}
         <div class="text-center my-3">
-            <a href="{% url 'edit-review' review.id %}" class="btn btn-success w-25">Edit</a>
+            <a href="{% url 'edit-review' review.id %}" class="btn btn-success">Edit</a>
             {% endif %}
             </div>
             {% if user == review.author or user.is_superuser %}
             <div class="text-center my-3">
            
-            <button href="#" class="btn bg-red1 w-25 text-white" data-bs-toggle="modal"
+            <button href="#" class="btn btn-danger text-white" data-bs-toggle="modal"
                 data-bs-target="#delete-review-{{ review.id }}">Delete</button>
            
         </div>
