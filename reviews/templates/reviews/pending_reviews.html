@@ -22,7 +22,7 @@
                                     alt="{{ review.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Review By: {{ review.author }}</p>
+                                    <p class="author">Review By: <span class="text-white">{{ review.author }}</span></p>
                                     <p>
                                         Rating: {% spaceless %}
                                         {% for star in "12345"|make_list %}
@@ -38,25 +38,26 @@
                             </div>
                             <h2 class="card-title">Title: {{ review.title }}</h2>
                             <p class="card-text">Description: {{ review.description }}</p>
-                            <p>Tags: {% for tag in review.tags.all %}
+                            <p>
+                                Tags: {% for tag in review.tags.all %}
                                 {{tag}},
                                 {% endfor %}
                             </p>
-                            <p>Platforms: {% for platform in review.platforms.all %}
+                            <p>
+                                Platforms: {% for platform in review.platforms.all %}
                                 {{platform}},
                                 {% endfor %}
                             </p>
                             <p>Genre: {{ review.genre }}</p>
-                            <hr />
+                            <hr>
                             <p class="card-text text-muted h6">{{ review.created_on}}</p>
-
+                            <!-- Section containing relevant buttons for the Full Review, Approval and Deletion, this page is only accessible by superusers -->
                             <div class="text-center"><a href="{% url 'review-detail' review.pk %}"
                                     class="btn btn-success w-50 my-2">Full Review</a>
                                 <form method="POST" action="{% url 'review-approval' review.pk %}">
                                     {% csrf_token %}
                                     <button class="btn bg-green1 text-white w-50 my-2" type="submit" name="action"
                                         value="approve">Approve</button>
-
                                 </form>
 
                                 <a href="#" class="btn btn-danger w-50 my-2" data-bs-toggle="modal"

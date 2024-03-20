@@ -3,6 +3,7 @@ from .models import GameReview, Genre, Tag, Platform
 from django_summernote.admin import SummernoteModelAdmin
 # Register your models here.
 
+
 @admin.register(GameReview)
 class GameReviewAdmin(SummernoteModelAdmin):
     """
