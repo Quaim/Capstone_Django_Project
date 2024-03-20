@@ -31,7 +31,7 @@ class GameReview(models.Model):
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE, null=True, blank=False)
     tags = models.ManyToManyField('Tag')
     platforms = models.ManyToManyField('Platform')
-    description = models.TextField(null=False, blank=False)
+    description = models.CharField(max_length=200,null=False, blank=False)
     featured_image = CloudinaryField("image", default="placeholder")
     review = models.TextField(null=False, blank=False)
     rating = models.PositiveIntegerField(default=1, choices=[(i, i) for i in range(1, 6)]) 
