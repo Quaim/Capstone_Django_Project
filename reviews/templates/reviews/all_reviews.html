@@ -6,7 +6,7 @@
     <div class="row">
         <h1 class="text-center">All Reviews</h1>
 
-        <!-- Blog Entries Column -->
+        <!-- Review Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                 {% for review in gamereview_list %}
@@ -37,7 +37,7 @@
                                 </div>
                             </div>
                             <h2 class="card-title">Title: {{ review.title }}</h2>
-                            <p class="card-text">{{ review.description }}</p>
+                            <p class="card-text">Description: {{ review.description }}</p>
                             <p>Tags: {% for tag in review.tags.all %}
                                 {{tag}},
                                 {% endfor %}

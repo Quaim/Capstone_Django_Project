@@ -20,7 +20,7 @@
                     {% endif %}
                     {% endfor %}
                     {% endspaceless %}</p>
-                
+
                 <p>Genre: {{ review.genre }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
@@ -48,13 +48,13 @@
 </div>
 <div class="container">
     <div class="row">
-        
+
 
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                
+
                 <article class="card-text">
                     <h2 class="text-center">Review</h2>
                     {{ review.review | safe }}
@@ -66,24 +66,24 @@
     <div>
         {% if not review.approved and request.user.is_superuser %}
         <div class="text-center">
-        <form method="POST" action="{% url 'review-approval' review.pk %}">
-            {% csrf_token %}
-            <button class="btn bg-green1 text-white w-25" type="submit" name="action"
-                value="approve">Approve</button>
-        </form>
+            <form method="POST" action="{% url 'review-approval' review.pk %}">
+                {% csrf_token %}
+                <button class="btn bg-green1 text-white w-25" type="submit" name="action"
+                    value="approve">Approve</button>
+            </form>
         </div>
         {% endif %}
         {% if request.user == review.author %}
         <div class="text-center my-3">
             <a href="{% url 'edit-review' review.id %}" class="btn btn-success w-25">Edit</a>
             {% endif %}
-            </div>
-            {% if user == review.author or user.is_superuser %}
-            <div class="text-center my-3">
-           
+        </div>
+        {% if user == review.author or user.is_superuser %}
+        <div class="text-center my-3">
+
             <button href="#" class="btn btn-danger text-white w-25" data-bs-toggle="modal"
                 data-bs-target="#delete-review-{{ review.id }}">Delete</button>
-           
+
         </div>
         <!-- Modal: confirm deletion -->
         <div class="modal fade" id="delete-review-{{ review.id }}" tabindex="-1"
@@ -110,17 +110,5 @@
             </div>
         </div>
         {% endif %}
-        <!-- {% if not review.approved and request.user.is_superuser %}
-        <div class="text-center">
-        <form method="POST" action="{% url 'review-approval' review.pk %}">
-            {% csrf_token %}
-            <button class="btn bg-green1 text-white" type="submit" name="action"
-                value="approve">Approve</button>
-        </form>
-        </div>
-        {% endif %} -->
     </div>
-
-
-
     {% endblock %}
