@@ -4,6 +4,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
+        <h1 class="text-center">Search Results</h1>
 
         <!-- Review Entries Column -->
         <div class="col-12 mt-3 mb-3 left">
@@ -46,7 +47,8 @@
                             <p class="card-text text-muted h6">{{ review.created_on}}
                             </p>
                             <p class="text-center"><a href="{% url 'review-detail' review.pk %}"
-                                    class="btn btn-success w-25">Full Review</a></p>
+                                    class="btn btn-success w-25">Full Review</a>
+                            </p>
                         </div>
                     </div>
                 </div>

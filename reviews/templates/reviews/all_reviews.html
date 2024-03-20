@@ -4,12 +4,13 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
+        <h1 class="text-center">All Reviews</h1>
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                 {% for review in gamereview_list %}
-                <div class="col mb-3">
+                <div class="col my-2">
                     <div class="card h-100 mb-4">
                         <div class="card-body">
                             <div class="image-container">
@@ -21,7 +22,7 @@
                                     alt="{{ review.title }}">
                                 {% endif %}
 
-                                <div>
+                                <div class="image-flash">
                                     <p class="author">Review By: {{ review.author }}</p>
                                     <p> Rating: {% spaceless %}
                                         {% for star in "12345"|make_list %}
@@ -31,23 +32,27 @@
                                         <i class="fas fa-star fa-fw fa-lg text-muted" aria-hidden="true"></i>
                                         {% endif %}
                                         {% endfor %}
-                                        {% endspaceless %}</p>
+                                        {% endspaceless %}
+                                    </p>
                                 </div>
                             </div>
                             <h2 class="card-title">Title: {{ review.title }}</h2>
                             <p class="card-text">{{ review.description }}</p>
                             <p>Tags: {% for tag in review.tags.all %}
                                 {{tag}},
-                                {% endfor %}</p>
+                                {% endfor %}
+                            </p>
                             <p>Platforms: {% for platform in review.platforms.all %}
                                 {{platform}},
-                                {% endfor %}</p>
+                                {% endfor %}
+                            </p>
                             <p>Genre: {{ review.genre }}</p>
                             <hr />
                             <p class="card-text text-muted h6">{{ review.created_on}}
                             </p>
-                            <p class="text-center"><a href="{% url 'review-detail' review.pk %}"
-                                    class="btn btn-success w-25">Full Review</a></p>
+                            <div class="text-center"><a href="{% url 'review-detail' review.pk %}"
+                                    class="btn btn-success w-50">Full Review</a>
+                            </div>
                         </div>
                     </div>
                 </div>
