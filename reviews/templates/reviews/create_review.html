@@ -9,7 +9,7 @@
 
 {% block content %}
 <h1 class="page-title text-center pt-3">Create Review</h1>
-<section class="container col-8">
+<section class="container col-8 my-3">
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.media }} 
