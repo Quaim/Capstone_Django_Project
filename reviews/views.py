@@ -182,7 +182,7 @@ def create_review(request):
             review.save()
             form.save_m2m()
 
-            messages.success(request, "Your review has been submitted and is pending approval.")  
+            messages.success(request, "Your review has been submitted and is pending approval by an admin.")  
 
             return redirect('home')
     else:
