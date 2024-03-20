@@ -81,8 +81,19 @@ html, body {
     text-decoration-color: #036977;
   }
 
+/* REVIEW CONTAINER */
 
+.image-container {
+    position: relative;
+}
 
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #188181;
+}
 
 /* REVIEW DETAIL */
 
@@ -129,6 +140,8 @@ html, body {
     transform: skew(15deg);
     z-index: 100;
 }
+
+
 
 
 .btn-1{

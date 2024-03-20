@@ -21,6 +21,9 @@
                                     alt="{{ review.title }}">
                                 {% endif %}
                                 <div class="image-flash">
+                                    <p class="author">Author: {{ review.author }}</p>
+                                </div>
+                                <div>
                                     <p class="author">Review By: {{ review.author }}</p>
                                     <p> Rating: {% spaceless %}
                                         {% for star in "12345"|make_list %}

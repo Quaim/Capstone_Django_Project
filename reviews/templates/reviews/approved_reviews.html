@@ -20,7 +20,7 @@
                                 <img class="card-img-top" src=" {{ review.featured_image.url }}"
                                     alt="{{ review.title }}">
                                 {% endif %}
-                                <div class="image-flash">
+                                <div>
                                     <p class="author">Review By: {{ review.author }}</p>
                                     <p> Rating: {% spaceless %}
                                         {% for star in "12345"|make_list %}
