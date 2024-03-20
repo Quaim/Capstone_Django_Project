@@ -46,58 +46,61 @@
                     <p class="card-text text-muted h6">{{ review.created_on}}
                     </p>
 
-                </div>
-                <div class="text-center my-3">
-                    <a type="submit" class="text-center btn btn-success w-50 my-3"
-                        href="{% url 'review-detail' review.pk %}">Full Review</a>
 
-                    <form method="POST" action="{% url 'review-approval' review.pk %}">
-                        {% csrf_token %}
-                        <button class="btn bg-green1 text-white w-50" type="submit" name="action"
-                            value="approve">Approve</button>
+                    <div class="text-center my-3">
+                        <a type="submit" class="text-center btn btn-success w-50 my-3"
+                            href="{% url 'review-detail' review.pk %}">Full Review</a>
 
-                    </form>
+                        <form method="POST" action="{% url 'review-approval' review.pk %}">
+                            {% csrf_token %}
+                            <button class="btn bg-green1 text-white w-50" type="submit" name="action"
+                                value="approve">Approve</button>
+
+                        </form>
 
 
-                    <div class="text center my-3">
-                        <a href="#" class="btn btn-danger w-50" data-bs-toggle="modal"
-                            data-bs-target="#delete-review-{{ review.id }}">Delete</a>
+                        <div class="text center my-3">
+                            <a href="#" class="btn btn-danger w-50" data-bs-toggle="modal"
+                                data-bs-target="#delete-review-{{ review.id }}">Delete</a>
 
+                        </div>
                     </div>
-                    <!-- Modal: confirm deletion -->
-                    <div class="modal fade" id="delete-review-{{ review.id }}" tabindex="-1"
-                        aria-labelledby="delete-review-{{ review.id }}-label" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="delete-review-{{ review.id }}-label">Delete
-                                        {{ review.title }}</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Are you sure you want to delete this review?
-                                    <br>
-                                    {{ review.title }}
-                                    <br>
-                                    <small>This action is permanent, and cannot be undone.</small>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
-                                    <a href="{% url 'delete-review' review.pk %}" class="btn btn-danger">Yes</a>
-                                </div>
+                </div>
+
+                <!-- Modal: confirm deletion -->
+                <div class="modal fade" id="delete-review-{{ review.id }}" tabindex="-1"
+                    aria-labelledby="delete-review-{{ review.id }}-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="delete-review-{{ review.id }}-label">Delete
+                                    {{ review.title }}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to delete this review?
+                                <br>
+                                {{ review.title }}
+                                <br>
+                                <small>This action is permanent, and cannot be undone.</small>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-bs-dismiss="modal">No</button>
+                                <a href="{% url 'delete-review' review.pk %}" class="btn btn-danger">Yes</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                {% empty %}
+                <div class="col">No Reviews containing your query exist, please check spelling just incase</div>
+                {% endfor %}
             </div>
-
-            {% empty %}
-            <div class="col">No Reviews containing your query exist, please check spelling just incase</div>
-            {% endfor %}
-
-
         </div>
-    </div>
 
-    {% endblock %}
+    </div>
+</div>
+
+{% endblock %}
