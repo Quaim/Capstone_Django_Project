@@ -11,9 +11,9 @@
                 <h1 class="post-title">{{ review.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">Review By - {{ review.author }} | {{ review.created_on }}</p>
-                <p> 
+                <p>
                     {% spaceless %}
-                    Author Rating: 
+                    Author Rating:
                     {% for star in "12345"|make_list %}
                     {% if forloop.counter <= review.rating|add:"0" %}
                     <i class="fas fa-star fa-fw fa-lg text-warning" aria-hidden="true"></i>
@@ -23,7 +23,6 @@
                     {% endfor %}
                     {% endspaceless %}
                 </p>
-
                 <p>Genre: {{ review.genre }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
@@ -52,13 +51,10 @@
 </div>
 <div class="container">
     <div class="row">
-
-
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
                 <!-- The review content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-
                 <article class="card-text">
                     <h2 class="text-center">Review</h2>
                     {{ review.review | safe }}
@@ -66,7 +62,6 @@
             </div>
         </div>
     </div>
-
     <div>
         {% if not review.approved and request.user.is_superuser %}
         <div class="text-center">
@@ -84,10 +79,8 @@
         </div>
         {% if user == review.author or user.is_superuser %}
         <div class="text-center my-3">
-
             <button href="#" class="btn btn-danger text-white w-25" data-bs-toggle="modal"
                 data-bs-target="#delete-review-{{ review.id }}">Delete</button>
-
         </div>
         <!-- Modal: confirm deletion -->
         <div class="modal fade" id="delete-review-{{ review.id }}" tabindex="-1"
@@ -115,4 +108,6 @@
         </div>
         {% endif %}
     </div>
-    {% endblock %}
+</div>
+<!-- review_detail.html content ends here -->
+{% endblock %}

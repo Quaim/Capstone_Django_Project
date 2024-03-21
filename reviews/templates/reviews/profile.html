@@ -4,14 +4,15 @@
 {% block content %}
 
 <div class="container text-center pt-3">
-   <h1>Welcome to your profile page, where you can access your approved and unapproved reviews</h1>
-   <hr>
-   {% if user.is_superuser %}
-   <h2>As you are an admin, you can also access reviews that are pending approval here, and either approve or delete them</h2>
-   {% endif %}
+  <h1>Welcome to your profile page, where you can access your approved and unapproved reviews</h1>
+  <hr>
+  {% if user.is_superuser %}
+  <h2>As you are an admin, you can also access reviews that are pending approval here, and either approve or delete them
+  </h2>
+  {% endif %}
 
-  
-   <div class="container text-center pt-3">
+
+  <div class="container text-center pt-3">
     <a href="{% url 'approved-reviews' %}" class="btn btn-success w-25">My Approved Reviews</a>
   </div>
   <div class="container text-center pt-3">
@@ -23,7 +24,6 @@
     <a href="{% url 'pending-reviews' %}" class="btn btn-success bg-green1 w-25">Reviews Pending Approval</a>
   </div>
   {% endif %}
-
-
 </div>
+<!-- profile.html content ends here -->
 {% endblock %}
