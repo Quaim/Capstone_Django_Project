@@ -11,7 +11,9 @@
                 <h1 class="post-title">{{ review.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">Review By - {{ review.author }} | {{ review.created_on }}</p>
-                <p> Author Rating: {% spaceless %}
+                <p> 
+                    {% spaceless %}
+                    Author Rating: 
                     {% for star in "12345"|make_list %}
                     {% if forloop.counter <= review.rating|add:"0" %}
                     <i class="fas fa-star fa-fw fa-lg text-warning" aria-hidden="true"></i>
@@ -19,7 +21,8 @@
                     <i class="fas fa-star fa-fw fa-lg text-muted" aria-hidden="true"></i>
                     {% endif %}
                     {% endfor %}
-                    {% endspaceless %}</p>
+                    {% endspaceless %}
+                </p>
 
                 <p>Genre: {{ review.genre }}</p>
             </div>
@@ -35,7 +38,8 @@
 </div>
 <div class="container col card mb-4  mt-3 left  top text-white bg-green1">
     <p>
-        <h5>Tags: </h5>{% for tag in review.tags.all %}
+        <h5>Tags: </h5>
+        {% for tag in review.tags.all %}
         {{tag}},
         {% endfor %}
     </p>
