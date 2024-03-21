@@ -19,6 +19,7 @@ def index(request):
     """
     return render(request, 'reviews/index.html')
 
+
 # About page
 def about(request):
     """
@@ -26,6 +27,7 @@ def about(request):
     which is the about page of the site.
     """
     return render(request, 'reviews/about.html')
+
 
 # Profile page
 def profile(request):
@@ -35,7 +37,8 @@ def profile(request):
     """
     return render(request, 'reviews/profile.html')
 
-# Render all reviews 
+
+# Render all reviews
 class AllReviews(generic.ListView):
     """
     This simple view will render all approved reviews to the all_reviews.html page
@@ -44,16 +47,17 @@ class AllReviews(generic.ListView):
     template_name = "reviews/all_reviews.html"
     paginate_by = 6
 
+
 # Search reviews
 def search_reviews(request):
     """
-    This view will get the value of the `searchform` 
-    and pass it into the variable `search_result`, 
+    This view will get the value of the `searchform`
+    and pass it into the variable `search_result`,
     All approved reviews will then be passed into the variable
-    `search_results` and ordered by rating. 
-    This variable will then be checked and filtered by a list of search 
+    `search_results` and ordered by rating.
+    This variable will then be checked and filtered by a list of search
     queries which checks which objects titles,genre,tags or platforms
-     in search_results contain the value of `search_result` i.e what 
+     in search_results contain the value of `search_result` i.e what
      the user typed into the search bar, ensuring only reviews that contain the
      searched query are rendered to the user.
     """
@@ -69,29 +73,30 @@ def search_reviews(request):
             Q(genre__name__icontains=search_result) |
             Q(tags__name__icontains=search_result) |
             Q(platforms__name__icontains=search_result)
-        ).distinct()      
+        ).distinct()
 
     context = {
         'search_results': search_results,
-        
+
     }
-    
+
     return render(request, template, context)
+
 
 # Review detail, extended information and full review
 def review_detail(request, review_id):
     """
     The purpose of this view is to display the full details of
-    a particular review. 
+    a particular review.
     """
-    review = get_object_or_404(GameReview, pk=review_id)    
+    review = get_object_or_404(GameReview, pk=review_id)
 
     context = {
         'review': review,
-   
     }
 
     return render(request, 'reviews/review_detail.html', context)
+
 
 # User's approved reviews, requires login
 @login_required
@@ -110,6 +115,7 @@ def user_approved_reviews(request):
 
     return render(request, 'reviews/approved_reviews.html', context)
 
+
 # User's unapproved reviews, requires login
 @login_required
 def user_unapproved_reviews(request):
@@ -126,6 +132,7 @@ def user_unapproved_reviews(request):
     }
 
     return render(request, 'reviews/unapproved_reviews.html', context)
+
 
 # Reviews that are pending approval from an admin, superusers only
 def pending_reviews(request):
@@ -154,8 +161,8 @@ def review_approval(request, pending_review_id):
     """
     For superusers only.
     From the review approval list, a superuser can approve
-    a review, this will update the approved field to True, moving the 
-    review into the approved section on the DB and it will subsequently be 
+    a review, this will update the approved field to True, moving the
+    review into the approved section on the DB and it will subsequently be
     rendred on the all_reviews.html page and the users approved reviews page
 
     """
@@ -170,15 +177,16 @@ def review_approval(request, pending_review_id):
         if action == 'approve':
             pending_review.approved = True
             pending_review.save()
-            messages.success(request, f'Review {pending_review.title} has been approved.')       
+            messages.success(request, f'Review {pending_review.title} has been approved.')
 
         return redirect('pending-reviews')
-    
+
     context = {
         'pending_review': pending_review,
     }
 
     return render(request, 'reviews/review_approval.html', context)
+
 
 # Create Review using ReviewForm
 @login_required
@@ -196,7 +204,7 @@ def create_review(request):
             review.author = request.user
             review.save()
             form.save_m2m()
-            messages.success(request, "Your review has been submitted and is pending approval by an admin.")  
+            messages.success(request, "Your review has been submitted and is pending approval by an admin.")
 
             return redirect('home')
     else:
@@ -208,12 +216,13 @@ def create_review(request):
 
     return render(request, 'reviews/create_review.html', context)
 
+
 # Edit review using ReviewForm
 @login_required
 def edit_review(request, review_id):
     """
-    An edit button will be available on the review_detail page if they 
-    are the author of that review. 
+    An edit button will be available on the review_detail page if they
+    are the author of that review.
     Using the `ReviewForm`, users can edit this review
     The fields will be prepopulated with the
     exact same data as the current review by creating an
@@ -231,8 +240,7 @@ def edit_review(request, review_id):
         if form.is_valid():
             form.instance.user = request.user
             review.approved = False
-            form.save()     
-
+            form.save()
             messages.success(request, 'Review successfuly updated and is now up for approval by an admin')
             return redirect('home')
         messages.error(request, 'An error occurred. Please try again.')
@@ -243,6 +251,7 @@ def edit_review(request, review_id):
         'review': review
     }
     return render(request, template, context)
+
 
 # Delete review
 @login_required
@@ -263,6 +272,6 @@ def delete_review(request, review_id):
         messages.success(request, f"{review.title} successfully deleted.")
 
     else:
-        messages.error(request, "You don't have permission to delete that review.")  
+        messages.error(request, "You don't have permission to delete that review.")
 
     return redirect('home')
