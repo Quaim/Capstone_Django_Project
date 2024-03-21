@@ -14,7 +14,7 @@
 
 <head>
     <title>Gamers Gambit</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Meta tags for search engines -->
     <meta name="description" content="Gamers Gambit - A community for Gamers">
     <meta name="keywords" content="gaming, gamers,game review, gaming community">
@@ -48,10 +48,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-red2 exo-title-bold">
         <div class="container-fluid">
-            <a class="navbar-brand logo mb-3 mt-3" href="{% url 'home' %}">
-                            <h1 class="d-none d-lg-block">
-                                <img class="logo" src="{% static '/images/GG_Logo.png' %}" alt="Gamers Gambit Logo" />
-                            </h1></a>
+            <a class="navbar-brand logo mb-3 mt-3" href="{% url 'home' %}">                
+                <img class="logo d-none d-lg-block" src="{% static '/images/GG_Logo.png' %}" alt="Gamers Gambit Logo">                
+            </a>
             <button class="navbar-toggler bg-green1" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -61,18 +60,16 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == home_url %}activepage{%endif%}"
-                            aria-current="" href="{% url 'home' %}">Home</a>
+                            aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == all_reviews_url %}activepage{%endif%}
-                            " aria-current="" href="{% url 'all-reviews' %}">Reviews</a>
+                            " aria-current="page" href="{% url 'all-reviews' %}">Reviews</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == about_url %}activepage{%endif%}
-                            " aria-current="" href="{% url 'about' %}">About</a>
+                            " aria-current="page" href="{% url 'about' %}">About</a>
                     </li>
-
-
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == logout_url %}activepage{%endif%}"
@@ -80,41 +77,35 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == create_review_url %}activepage{%endif%}"
-                            aria-current="" href="{% url 'create-review' %}">Create Review</a>
+                            aria-current="page" href="{% url 'create-review' %}">Create Review</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == profile_url %}activepage{%endif%}"
-                            aria-current="" href="{% url 'profile' %}">Profile</a>
+                            aria-current="page" href="{% url 'profile' %}">Profile</a>
                     </li>
-
                     {% else %}
-
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == signup_url %}activepage{%endif%}"
-                            aria-current="" href="{% url 'account_signup' %}">Register</a>
+                            aria-current="page" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == login_url %}activepage{%endif%}"
-                            aria-current="" href="{% url 'account_login' %}">Login</a>
+                            aria-current="page" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
                     {% if request.user.is_superuser %}
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-current="" href="{% url 'admin:index' %}" target="_blank"
+                        <a class="nav-link text-white" aria-current="page" href="{% url 'admin:index' %}" target="_blank"
                             rel="noopener"><i class="fas fa-star fa-fw fa-md text-warning"
                                 aria-hidden="true"></i>Admin</a>
                     </li>
-                    {% endif %}
-                    <form class="d-flex text-center" method="get" role="search" action="{% url 'search-results' %}">
-
-                        <input class="form-control me-2" type="search" placeholder="Search Reviews" name="searchform"
-                            aria-label="Search">
-                        <button class="btn bg-green1 text-white" type="submit">Search</button>
-                    </form>
-
+                    {% endif %}                    
                 </ul>
-              
-
+                <form class="d-flex text-center" method="get" role="search" action="{% url 'search-results' %}">
+                    <input class="form-control me-2" type="search" placeholder="Search Reviews" name="searchform"
+                    aria-label="Search">
+                    <button class="btn bg-green1 text-white" type="submit">Search</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -135,9 +126,10 @@
     {% endwith %}
 
     <main class="flex-shrink-0 main-bg">
-        
+
         {% if user.is_authenticated %}
-        <p class="text-end m3 bg-green1">You are logged in as  <span class="text-white"><strong>{{user}}</strong></span></p>
+        <p class="text-end m3 bg-green1">You are logged in as <span class="text-white"><strong>{{user}}</strong></span>
+        </p>
         {% else %}
         <p class="text-end m3 bg-green1">You are not logged in</p>
         {% endif %}
@@ -189,9 +181,7 @@
     <script src="{% static 'js/script.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js">
     </script>
-
     {% block extras %}
     {% endblock %}
 </body>
-
 </html>
