@@ -42,7 +42,7 @@ class GameReview(models.Model):
         )
     tags = models.ManyToManyField('Tag')
     platforms = models.ManyToManyField('Platform')
-    description = models.CharField(max_length=250, null=False, blank=False)
+    description = models.CharField(max_length=550, null=False, blank=False)
     featured_image = CloudinaryField("image", default="placeholder")
     review = models.TextField(null=False, blank=False)
     rating = models.PositiveIntegerField(
