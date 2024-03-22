@@ -4,7 +4,8 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/Quaim/Capstone_Django_Project)](https://github.com/Quaim/Capstone_Django_Project/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Quaim/Capstone_Django_Project)](https://github.com/Quaim/Capstone_Django_Project)
 
-
+Welcome to Gamers Gambit (GG), the go-to destination for gamers seeking the latest reviews, news, and insights into the vast world of video games. Our mission is to explore the depths of gaming, from the adrenaline-pumping action of blockbuster titles to the thoughtful narratives of indie gems, providing our community with the knowledge they need to find their next great gaming adventure.
+Join us as we navigate the ever-evolving landscapes of digital worlds, offering expert reviews and engaging content tailored for both the seasoned veterans and newcomers to the gaming scene. At Gamers Gambit , we're more than just a review site; we're a vibrant community of gamers sharing a passion for the art and culture of video games. Dive in and discover your next favourite game with us!
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
 
@@ -78,7 +79,8 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://gamers-gambit-b
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
 
-In this section, you will briefly explain your design processes.
+I wanted the design to be simple and intuitive for all audiences so that it is accessible as possible as the target audience 
+is essentially anyone and everyone, as long as they enjoy the world of gaming. 
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
@@ -106,7 +108,7 @@ Example:
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
+I used [coolors.co](https://coolors.co/ffffff-212529-e71a36-036977) to generate my colour palette.
 
 ![screenshot](documentation/coolors.png)
 

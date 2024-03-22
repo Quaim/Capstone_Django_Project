@@ -245,7 +245,7 @@ def edit_review(request, review_id):
             request,
             'Access denied. Please make sure this is a review you created.'
             )
-        return redirect('home')
+        return render(request, 'unauthorized.html')
     # user matches the review author / proceed
     form = ReviewForm(request.POST or None, request.FILES, instance=review)
     if request.method == 'POST':
