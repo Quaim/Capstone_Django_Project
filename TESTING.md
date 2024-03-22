@@ -76,6 +76,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | reviews | review_detail.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | reviews | search_result.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | reviews | unapproved_reviews.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| templates | 404.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | unauthorised.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | base_manage.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | usersession_list.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |

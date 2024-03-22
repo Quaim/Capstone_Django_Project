@@ -16,7 +16,7 @@ class ReviewForm(forms.ModelForm):
     """
     platforms = forms.ModelMultipleChoiceField(
         queryset=Platform.objects.all().order_by("name"),
-        help_text = "Select multiple if needed",
+        help_text="Select multiple if needed",
         widget=forms.CheckboxSelectMultiple(
             attrs={
                 "class": "form-check-input",
@@ -25,7 +25,7 @@ class ReviewForm(forms.ModelForm):
     )
     tags = forms.ModelMultipleChoiceField(
         queryset=Tag.objects.all().order_by("name"),
-        help_text = "Select multiple if needed",
+        help_text="Select multiple if needed",
         widget=forms.CheckboxSelectMultiple(
             attrs={
                 "class": "form-check-input",
