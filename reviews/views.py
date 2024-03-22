@@ -41,7 +41,7 @@ def profile(request):
 # Render all reviews
 class AllReviews(generic.ListView):
     """
-    This simple view will render all approved reviews to the all_reviews.html page
+    This simple view will render all approved reviews to the all_reviews.html page  # noqa
     """
     queryset = GameReview.objects.filter(approved=True)
     template_name = "reviews/all_reviews.html"
@@ -65,7 +65,7 @@ def search_reviews(request):
 
     search_result = request.GET.get('searchform')
 
-    search_results = GameReview.objects.filter(approved=True).order_by('-rating')
+    search_results = GameReview.objects.filter(approved=True).order_by('-rating')  # noqa
 
     if search_result:
         search_results = search_results.filter(
@@ -107,7 +107,7 @@ def user_approved_reviews(request):
     filter, only the current user's approved reviews will be displayed
     here.
     """
-    approved_reviews = GameReview.objects.filter(author=request.user, approved=True)
+    approved_reviews = GameReview.objects.filter(author=request.user, approved=True)  # noqa
 
     context = {
         'approved_reviews': approved_reviews
@@ -125,7 +125,7 @@ def user_unapproved_reviews(request):
     filter, only the current user's unapproved reviews will be displayed
     here.
     """
-    unapproved_reviews = GameReview.objects.filter(author=request.user, approved=False)
+    unapproved_reviews = GameReview.objects.filter(author=request.user, approved=False)  # noqa
 
     context = {
         'unapproved_reviews': unapproved_reviews
@@ -177,7 +177,7 @@ def review_approval(request, pending_review_id):
         if action == 'approve':
             pending_review.approved = True
             pending_review.save()
-            messages.success(request, f'Review {pending_review.title} has been approved.')
+            messages.success(request, f'Review {pending_review.title} has been approved.')  # noqa
 
         return redirect('pending-reviews')
 
@@ -192,9 +192,9 @@ def review_approval(request, pending_review_id):
 @login_required
 def create_review(request):
     """
-    Logged in users will be able to create a review using the `CreateReview` Form which uses fields from the
-    `GameReviewModel`. Once a review has been created, it will
-    be put up for review by an admin and redirect the user back
+    Logged in users will be able to create a review using the `CreateReview`
+    Form which uses fields from the `GameReviewModel`. Once a review has been created, 
+    it will be put up for review by an admin and redirect the user back
     to the home page.
     """
     if request.method == 'POST':
@@ -204,7 +204,7 @@ def create_review(request):
             review.author = request.user
             review.save()
             form.save_m2m()
-            messages.success(request, "Your review has been submitted and is pending approval by an admin.")
+            messages.success(request, "Your review has been submitted and is pending approval by an admin.")  # noqa
 
             return redirect('home')
     else:
@@ -232,7 +232,7 @@ def edit_review(request, review_id):
     """
     review = get_object_or_404(GameReview, pk=review_id)
     if review.author != request.user:
-        messages.error(request, 'Access denied. Please make sure this is a review you created.')
+        messages.error(request, 'Access denied. Please make sure this is a review you created.')  # noqa
         return redirect('home')
     # user matches the review author / proceed
     form = ReviewForm(request.POST or None, request.FILES, instance=review)
@@ -241,7 +241,7 @@ def edit_review(request, review_id):
             form.instance.user = request.user
             review.approved = False
             form.save()
-            messages.success(request, 'Review successfuly updated and is now up for approval by an admin')
+            messages.success(request, 'Review successfuly updated and is now up for approval by an admin')  # noqa
             return redirect('home')
         messages.error(request, 'An error occurred. Please try again.')
     form = ReviewForm(instance=review)
@@ -272,6 +272,6 @@ def delete_review(request, review_id):
         messages.success(request, f"{review.title} successfully deleted.")
 
     else:
-        messages.error(request, "You don't have permission to delete that review.")
+        messages.error(request, "You don't have permission to delete that review.")  # noqa
 
     return redirect('home')

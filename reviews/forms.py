@@ -9,8 +9,8 @@ class ReviewForm(forms.ModelForm):
 
     create a variable for platform and tags to be used on
     the form, this is required as manytomanyfields are not
-    automatically usable in django forms by default, also sets the widget to a checkbox
-    for each tag/platform in the model so users can select multiple ones to then
+    automatically usable in django forms by default, also sets the widget to a checkbox  # noqa
+    for each tag/platform in the model so users can select multiple ones to then  # noqa
     be used in the relevant views
     """
     platforms = forms.ModelMultipleChoiceField(
