@@ -29,18 +29,25 @@ class Platform(models.Model):
         return self.name
 
 
-# Main GameReview model to be used in form and views to generate reviews on the frontend and backend  # noqa
+# Main GameReview model to be used in form and views to generate
+# reviews on the frontend and backend  
 class GameReview(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='game_reviews', null=True)  # noqa
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='game_reviews', null=True
+        )
     title = models.CharField(max_length=100, null=False, blank=False)
     slug = models.SlugField(max_length=200, blank=True)
-    genre = models.ForeignKey(Genre, on_delete=models.CASCADE, null=True, blank=False)  # noqa
+    genre = models.ForeignKey(
+        Genre, on_delete=models.CASCADE, null=True, blank=False
+        )
     tags = models.ManyToManyField('Tag')
     platforms = models.ManyToManyField('Platform')
     description = models.CharField(max_length=200, null=False, blank=False)
     featured_image = CloudinaryField("image", default="placeholder")
     review = models.TextField(null=False, blank=False)
-    rating = models.PositiveIntegerField(default=1, choices=[(i, i) for i in range(1, 6)])  # noqa
+    rating = models.PositiveIntegerField(
+        default=1, choices=[(i, i) for i in range(1, 6)]
+        )
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
