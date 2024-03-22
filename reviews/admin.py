@@ -12,7 +12,7 @@ class GameReviewAdmin(SummernoteModelAdmin):
     """
     list_display = ('title', 'slug', 'approved', 'created_on')
     search_fields = ['title', 'review']
-    list_filter = ('approved','created_on')
+    list_filter = ('approved', 'created_on')
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('review',)
 

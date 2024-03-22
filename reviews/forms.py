@@ -6,9 +6,9 @@ class ReviewForm(forms.ModelForm):
     """
     A form to allow users to create a game review.
 
-    create a variable for platform and tags to be used on 
-    the form, this is required as manytomanyfields are not 
-    automatically usable in django forms by default, also sets the widget to a checkbox 
+    create a variable for platform and tags to be used on
+    the form, this is required as manytomanyfields are not
+    automatically usable in django forms by default, also sets the widget to a checkbox
     for each tag/platform in the model so users can select multiple ones to then  
     be used in the relevant views
     """
