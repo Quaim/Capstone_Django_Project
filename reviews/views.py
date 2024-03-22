@@ -193,7 +193,7 @@ def review_approval(request, pending_review_id):
 def create_review(request):
     """
     Logged in users will be able to create a review using the `CreateReview`
-    Form which uses fields from the `GameReviewModel`. Once a review has been created, 
+    Form which uses fields from the `GameReviewModel`. Once a review has been created,  # noqa
     it will be put up for review by an admin and redirect the user back
     to the home page.
     """

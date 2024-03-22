@@ -15,11 +15,11 @@ class ReviewForm(forms.ModelForm):
     """
     platforms = forms.ModelMultipleChoiceField(
         queryset = Platform.objects.all().order_by("name"),
-        widget = forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),
+        widget = forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),  # noqa
     )
     tags = forms.ModelMultipleChoiceField(
         queryset = Tag.objects.all().order_by("name"),
-        widget = forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),
+        widget = forms.CheckboxSelectMultiple(attrs={"class": "form-check-input"}),  # noqa
     )
 
     class Meta:
