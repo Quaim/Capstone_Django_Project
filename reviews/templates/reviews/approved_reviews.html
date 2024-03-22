@@ -23,9 +23,9 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Review By: <span class="text-white">{{ review.author }}</span></p>
-                                    <p> 
+                                    <p>
                                         {% spaceless %}
-                                        Rating: 
+                                        Rating:
                                         {% for star in "12345"|make_list %}
                                         {% if forloop.counter <= review.rating|add:"0" %}
                                         <i class="fas fa-star fa-fw fa-lg text-warning" aria-hidden="true"></i>
@@ -40,13 +40,13 @@
                             <h2 class="card-title">Title: {{ review.title }}</h2>
                             <p class="card-text">Description: {{ review.description }}</p>
                             <p>
-                                Tags: 
+                                Tags:
                                 {% for tag in review.tags.all %}
                                 {{tag}},
                                 {% endfor %}
                             </p>
                             <p>
-                                Platforms: 
+                                Platforms:
                                 {% for platform in review.platforms.all %}
                                 {{platform}},
                                 {% endfor %}
@@ -54,10 +54,10 @@
                             <p>Genre: {{ review.genre }}</p>
                             <hr>
                             <p class="card-text text-muted h6">{{ review.created_on}}</p>
-
-                            <div class="text-center"><a href="{% url 'review-detail' review.pk %}"
-                                    class="btn btn-success w-50">Full Review</a>
-                            </div>
+                        </div>
+                        <!-- Section containing relevant button to access the full review on the review_detail page for this review -->
+                        <div class="text-center card-footer"><a href="{% url 'review-detail' review.pk %}"
+                                class="btn btn-success w-50">Full Review</a>
                         </div>
                     </div>
                 </div>
@@ -67,6 +67,6 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
 <!-- approved_reviews.html content ends here -->
 {% endblock %}
