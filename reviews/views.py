@@ -30,6 +30,7 @@ def about(request):
 
 
 # Profile page
+@login_required
 def profile(request):
     """
     This simple view will render the profile.html template
