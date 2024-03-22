@@ -13,15 +13,15 @@
 
 
   <div class="container text-center pt-3">
-    <a href="{% url 'approved-reviews' %}" class="btn btn-success w-25">My Approved Reviews</a>
+    <a href="{% url 'approved-reviews' %}" class="btn btn-success w-50">My Approved Reviews</a>
   </div>
   <div class="container text-center pt-3">
-    <a href="{% url 'unapproved-reviews' %}" class="btn btn-success bg-red1 w-25">My Unapproved Reviews</a>
+    <a href="{% url 'unapproved-reviews' %}" class="btn btn-success bg-red1 w-50">My Unapproved Reviews</a>
   </div>
 
   {% if user.is_superuser %}
   <div class="container text-center py-3">
-    <a href="{% url 'pending-reviews' %}" class="btn btn-success bg-green1 w-25">Reviews Pending Approval</a>
+    <a href="{% url 'pending-reviews' %}" class="btn btn-success bg-green1 w-50">Reviews Pending Approval</a>
   </div>
   {% endif %}
 </div>
