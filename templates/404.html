@@ -6,12 +6,11 @@
 {% block content %}
 
 <div class="row text-center">
-    <h2 class="unauthorized-info">
-        Sorry, we could not find what you were looking for.
+    <h2>Sorry, we could not find what you were looking for.</h2>
     <p>Click <a href="{% url 'home' %}">Here </a>to return to the home page.</p>
     <p>Or click <a href="{% url 'account_login' %}">Here</a> to log in.</p>
     <div class="text-center">
-    <img class="img-fluid" src="{% static 'images/404.webp' %}" alt="">
-</div>
+        <img class="img-fluid" src="{% static 'images/404.webp' %}" alt="Page not found">
+    </div>
 </div>
 {% endblock %}
