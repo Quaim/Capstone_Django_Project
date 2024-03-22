@@ -4,6 +4,8 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/Quaim/Capstone_Django_Project)](https://github.com/Quaim/Capstone_Django_Project/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Quaim/Capstone_Django_Project)](https://github.com/Quaim/Capstone_Django_Project)
 
+
+
 🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
 
 !! IMPORTANT !! RE: Table of Contents
@@ -34,7 +36,7 @@ Consider adding a new folder called `documentation`, and add the amiresponsive s
 To add the image into your README, use this format:
 (assuming you have a new folder called `documentation` with an image called "mockup.png")
 
-![screenshot](documentation/mockup.png)
+
 
 Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
 Find out more about using Markdown elements here:
@@ -108,26 +110,6 @@ I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0
 
 ![screenshot](documentation/coolors.png)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-⚠️ ONLY IF YOU ACTUALLY ADDED `:root` variables in CSS! ⚠️
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
 
 ### Typography
 
