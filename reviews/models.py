@@ -30,7 +30,7 @@ class Platform(models.Model):
 
 
 # Main GameReview model to be used in form and views to generate
-# reviews on the frontend and backend  
+# reviews on the frontend and backend
 class GameReview(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='game_reviews', null=True
