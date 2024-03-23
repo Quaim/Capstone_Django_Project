@@ -60,6 +60,10 @@ p {
     height: 80px;
 }
 
+.home_image {
+    max-height: 50vh;
+}
+
 /* ACTIVE PAGE */
 
 .activepage {
