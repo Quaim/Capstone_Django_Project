@@ -78,8 +78,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | reviews | unapproved_reviews.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | 404.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | unauthorised.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | base_manage.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | usersession_list.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+
 
 ### CSS
 
@@ -283,10 +282,10 @@ Defensive programming was manually tested with the below user acceptance testing
 | About | | | | | |
 | | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature03.png) |
 | | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature04.png) |
-| Gallery | | | | | |
+| n | | | | | |
 | | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature05.png) |
 | | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature06.png) |
-| Contact | | | | | |
+| Profile | | | | | |
 | | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature behaved as expected, and it did Y | Test concluded and passed | ![screenshot](documentation/features/feature07.png) |
 | | Feature is expected to do X when the user does Y | Tested the feature by doing Y | The feature did not respond to A, B, or C. | I did Z to the code because something was missing | ![screenshot](documentation/features/feature08.png) |
 | repeat for all remaining pages | x | x | x | x | x |

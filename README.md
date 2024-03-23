@@ -88,11 +88,16 @@ is essentially anyone and everyone, as long as they enjoy the world of gaming.
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
 
-Explain your colours and the colour scheme.
+For the colour scheme I decided to keep it fairly simple with only a couple of main colours, I knew I wanted red and 
+the green kind of came by accident but I was pleased with the overall aesthetic as there was a decent contrast between
+the two colours. ChatGPT also had some input into this decision as I was making the logo for the website this is the colour scheme 
+it provided when I asked for a vibrant colour scheme including red, and it produced the logo. I was pleased with with feel of it
+and decided to use https://imagecolorpicker.com/ to find the exact colours within the logo and then use those colours for the theme of 
+the site.
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
-- `#000000` used for primary text.
+- `#000000` used for the header and footer text.
 - `#E84610` used for primary highlights.
 - `#4A4A4F` used for secondary text.
 - `#009FE3` used for secondary highlights.
@@ -141,27 +146,30 @@ In this section, list all of your user stories for the project.
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a user I want to be able to easily navigate between the various pages on the website so that I can access the content I am looking for efficiently
+- As a user I want to be able to view an about page that gives a detailed view of what the website is about so that I know what to expect from it
+- As a user I want to be welcomed to the website by a page that gives me an idea of what the website is about and has links to other necessary pages
+- As a user I want to be able to view a more detailed view of a particular review, so that I can read the full length review
+- As a User I want to be able to easily access the public reviews so that I can explore the various reviews and their contents
+- As a User I want to be able to search reviews so that I can easily retrieve only a certain type of review, by title, tag or platform
+- As a user I want to be able to easily sign up and login to the website to access the options and content only registered users have access to
+- As a user I want visual feedback when I perform an action to let me know if my action was successful/unsuccessful
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning User I want access to a list of my unapproved reviews so that I can easily access them for edit or deletion
+- As a returning User I want to have access to a list of my approved reviews so that I can easily access them for edit or deletion
+- As a returning user I want to be able to create, read up date and delete my own reviews on the website so that others can access these reviews if they are approved
+- As a returning user I want access to a profile page that allows me to read, edit or delete my existing reviews
+
 
 ### Site Admin
 
 - As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As an Admin I should be able to create, read, update and delete reviews to keep the site in order
+- As an Admin I can create, read, update and delete users
+- As an Admin I want access to a list of reviews that are pending approval so that I can easily access them for approval or deletion
+- As an Admin I want a link to the admin page on the front end so I can easily access the admin page for database /site management.
 
 ## Wireframes
 
@@ -336,7 +344,7 @@ Feel free to delete any unused items below as necessary.
 - [![AWS S3](https://img.shields.io/badge/AWS_S3-grey?logo=amazons3&logoColor=569A31)](https://aws.amazon.com/s3) used for online static file storage.
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
-
+- https://imagecolorpicker.com/ used to match the colours in the logo to use in the theme of the site
 ## Database Design
 
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
@@ -651,8 +659,6 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
-| 
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
 | [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
 | [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
 | [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
@@ -679,21 +685,12 @@ by sending yourself the following command: `!freemedia`.
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://favicon.io/favicon-converter/) | entire site | image | favicon on all pages |
+| [favicon](https://favicon.io/favicon-converter/) | entire site | image | favicon on all pages |
 | [ChatGPT](https://chat.openai.com/) | entire site | images | all review images and site logo |
 
 
 
 ### Acknowledgements
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-⚠️⚠️ EXAMPLES ONLY - REPLACE WITH YOUR OWN ⚠️⚠️
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
