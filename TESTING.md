@@ -172,17 +172,192 @@ Sample responsiveness testing documentation:
 
 I've tested my deployed project on multiple devices in chrome dev tools to check for responsiveness issues.
 
-| Device | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
+### Desktop Dev Tools 
+All working as expected
 
-| Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile-home.png) | ![screenshot](documentation/responsiveness/responsive-mobile-about.png) | ![screenshot](documentation/responsiveness/responsive-mobile-contact.png) | ![screenshot](documentation/responsiveness/responsive-mobile-etc.png) | Works as expected |
+<details>
+<summary> Click here to see the Desktop Pages </summary>
+
+Home
+  - ![screenshot](documentation/responsiveness/Desktop_home.png)
+
+About
+  - ![screenshot](documentation/responsiveness/Desktop_about.png)
+
+All Reviews
+  - ![screenshot](documentation/responsiveness/Dekstop_allreviews.png)
+
+Review Detail
+  - ![screenshot](documentation/responsiveness/Desktop_reviewdetail_loggedout.png)
+
+Search Result
+  - ![screenshot](documentation/responsiveness/Desktop_searchresults.png)
+
+Profile
+  - ![screenshot](documentation/responsiveness/Desktop_profile.png)
+
+Approved Review
+  - ![screenshot](documentation/responsiveness/Desktop_approvedreviews.png)
+
+Unapproved Review
+  - ![screenshot](documentation/responsiveness/Desktop_unapprovedreviews.png)
+
+Pending Reviews 
+  - ![screenshot](documentation/responsiveness/Desktop_pendingreviews.png)
+
+Sign In
+  - ![screenshot](documentation/responsiveness/Desktop_signin.png)
+
+Register
+  - ![screenshot](documentation/responsiveness/Desktop_register.png)
+
+Sign Out
+  - ![screenshot](documentation/responsiveness/Desktop_signout.png)
+
+Create Review
+  - ![screenshot](documentation/responsiveness/Desktop_createreview.png)
+
+Edit Review
+  - ![screenshot](documentation/responsiveness/Desktop_editreview.png)
+
+Delete Review (Modal)
+  - ![screenshot](documentation/responsiveness/Desktop_deletereview_modal.png)
+
+404 page
+  - ![screenshot](documentation/responsiveness/Desktop_404.png)
+
+Unauthorised Page
+  - ![screenshot](documentation/responsiveness/Desktop_unauthorised.png)
+
+[jump to the top](###Desktop-Dev-Tools)
+
+</details>
+
+### Tablet Dev Tools 
+All working as expected
+
+<details>
+<summary> Click here to see the Tablet Pages </summary>
+
+Home
+  - ![screenshot](documentation/responsiveness/Tablet_home.png)
+
+About
+  - ![screenshot](documentation/responsiveness/Tablet_about.png)
+
+All Reviews
+  - ![screenshot](documentation/responsiveness/Tablet_allreviews.png)
+
+Review Detail
+  - ![screenshot](documentation/responsiveness/Tablet_reviewdetail_loggedout.png)
+
+Search Result
+  - ![screenshot](documentation/responsiveness/Tablet_searchresults.png)
+
+Profile
+  - ![screenshot](documentation/responsiveness/Tablet_profile.png)
+
+Approved Review
+  - ![screenshot](documentation/responsiveness/Tablet_approvedreviews.png)
+
+Unapproved Review
+  - ![screenshot](documentation/responsiveness/Tablet_unapprovedreviews.png)
+
+Pending Reviews 
+  - ![screenshot](documentation/responsiveness/Tablet_pendingreviews.png)
+
+Sign In
+  - ![screenshot](documentation/responsiveness/Tablet_signin.png)
+
+Register
+  - ![screenshot](documentation/responsiveness/Tablet_register.png)
+
+Sign Out
+  - ![screenshot](documentation/responsiveness/Tablet_signout.png)
+
+Create Review
+  - ![screenshot](documentation/responsiveness/Tablet_createreview.png)
+
+Edit Review
+  - ![screenshot](documentation/responsiveness/Tablet_editreview.png)
+
+Delete Review (Modal)
+  - ![screenshot](documentation/responsiveness/Tablet_deletereview_modal.png)
+
+404 page
+  - ![screenshot](documentation/responsiveness/Tablet_404.png)
+
+Unauthorised Page
+  - ![screenshot](documentation/responsiveness/Tablet_unauthorised.png)
+
+[jump to the top](###Tablet-Dev-Tools)
+
+</details>
+
+### Mobile Dev Tools 
+All working as expected
+
+<details>
+<summary> Click here to see the Tablet Pages </summary>
+
+Home
+  - ![screenshot](documentation/responsiveness/Mobile_home.png)
+
+About
+  - ![screenshot](documentation/responsiveness/Mobile_about.png)
+
+All Reviews
+  - ![screenshot](documentation/responsiveness/Mobile_allreviews.png)
+
+Review Detail
+  - ![screenshot](documentation/responsiveness/Mobile_reviewdetail_loggedout.png)
+
+Search Result
+  - ![screenshot](documentation/responsiveness/Mobile_searchresults.png)
+
+Profile
+  - ![screenshot](documentation/responsiveness/Mobile_profile.png)
+
+Approved Review
+  - ![screenshot](documentation/responsiveness/Mobile_approvedreviews.png)
+
+Unapproved Review
+  - ![screenshot](documentation/responsiveness/Mobile_unapprovedreviews.png)
+
+Pending Reviews 
+  - ![screenshot](documentation/responsiveness/Mobile_pendingreviews.png)
+
+Sign In
+  - ![screenshot](documentation/responsiveness/Mobile_signin.png)
+
+Register
+  - ![screenshot](documentation/responsiveness/Mobile_register.png)
+
+Sign Out
+  - ![screenshot](documentation/responsiveness/Mobile_signout.png)
+
+Create Review
+  - ![screenshot](documentation/responsiveness/Mobile_createreview.png)
+
+Edit Review
+  - ![screenshot](documentation/responsiveness/Mobile_editreview.png)
+
+Delete Review (Modal)
+  - ![screenshot](documentation/responsiveness/Mobile_deletereview_modal.png)
+
+404 page
+  - ![screenshot](documentation/responsiveness/Mobile_404.png)
+
+Unauthorised Page
+  - ![screenshot](documentation/responsiveness/Mobile_unauthorised.png)
+
+[jump to the top](###Mobile-Dev-Tools)
+
+</details>
+
+[jump to the top](###Mobile-Dev-Tools)
 
 
-| Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet-home.png) | ![screenshot](documentation/responsiveness/responsive-tablet-about.png) | ![screenshot](documentation/responsiveness/responsive-tablet-contact.png) | ![screenshot](documentation/responsiveness/responsive-tablet-etc.png) | Works as expected |
-
-| Desktop | ![screenshot](documentation/responsiveness/responsive-desktop-home.png) | ![screenshot](documentation/responsiveness/responsive-desktop-about.png) | ![screenshot](documentation/responsiveness/responsive-desktop-contact.png) | ![screenshot](documentation/responsiveness/responsive-desktop-etc.png) | Works as expected |
-
-| repeat for any other tested browsers | x | x | x | x | x |
 
 ## Lighthouse Audit
 
@@ -362,9 +537,10 @@ from the respective feature.
 | As a user I want visual feedback when I perform an action to let me know if my action was successful/unsuccessful. (one example) | ![screenshot](documentation/features/messages/Review_submitted_message.png) |
 | As a returning user I want access to a list of my unapproved reviews so that I can easily access them for edit or deletion. | ![screenshot](documentation/features/Desktop_unapprovedreviews.png) |
 | As a returning user I want to have access to a list of my approved reviews so that I can easily access them for edit or deletion. | ![screenshot](documentation/features/Desktop_approvedreviews.png) |
-| As a returning user I want to be able to create, read update and delete my own reviews on the website so that others can access these reviews if they are approved. | ![screenshot](documentation/features/feature09.png) |
-| As a returning user I want access to a profile page that allows me to read, edit or delete my existing reviews. | ![screenshot](documentation/features/feature09.png) |
-| As an Admin I should be able to create, read, update and delete reviews to keep the site in order. | ![screenshot](documentation/features/Desktop_reviewdetail_userowned.png) |
+| As a returning user I want to be able to create, read update and delete my own reviews on the website so that others can access these reviews if they are approved. | ![screenshot](documentation/features/Desktop_reviewdetail_userowned.png) |
+| As a returning user I want access to a profile page that allows me to easily access my approved and unapproved reviews. | ![screenshot](documentation/features/Desktop_profile.png) |
+| As an Admin I want a profile page that allows me to easily access my approved and unapproved reviews and additonally access reviews pending approval. | ![screenshot](documentation/features/Desktop_profile_admin.png) |
+| As an Admin I should be able to create, read, update and delete reviews to keep the site in order. | ![screenshot](documentation/features/Desktop_reviewdetail_notowned_admin.png) |
 | As an Admin I want access to a list of reviews that are pending approval so that I can easily access them for approval or deletion. | ![screenshot](documentation/features/Desktop_pendingreviews.png) |
 | As an Admin I want a link to the admin page on the front end so I can easily access the admin page for database /site management.. | ![screenshot](documentation/features/Desktop_navbar_admin.png) |
 | As an Admin I can create, read, update and delete users. No screenshot available, all working.
