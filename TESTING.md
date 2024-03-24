@@ -61,23 +61,23 @@ You are not required to validate external libraries/frameworks, such as imported
 
 ### HTML
 
-I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
+I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files, i used the source code as direct input to avoid issues that come with using certain technologies such as bootstrap and using python variables.
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| reviews | about.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | all_reviews.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | approved_reviews.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | create_review.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | edit_review.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | index.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | pending_reviews.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | profile.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | review_detail.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| reviews | about.html | ![screenshot](documentation/validation/About_validator.w3.org_nu_.png) | |
+| reviews | all_reviews.html | ![screenshot](documentation/validation/All_Reviews_validator.w3.org_nu_.png) | |
+| reviews | approved_reviews.html | ![screenshot](documentation/validation/Approved_Reviews_validator.w3.org_nu_.png) | |
+| reviews | create_review.html | ![screenshot](documentation/validation/Create_Review_validator.w3.org_nu_.png) |The manytomany fields had same class so registered a duplicate attribute error, unavoidable  |
+| reviews | edit_review.html | ![screenshot](documentation/validation/Editreview_validator.png) | same unavoidable errors as the create review due to manytomany fields |
+| reviews | index.html | ![screenshot](documentation/validation/Home_validator.w3.org_nu_.png) | |
+| reviews | pending_reviews.html | ![screenshot](documentation/validation/Pending_Reviews_validator.w3.org_nu_.png) | |
+| reviews | profile.html | ![screenshot](documentation/validation/Profile_validator.w3.org_nu_.png) | |
+| reviews | review_detail.html | ![screenshot](documentation/validation/Search_Results_validator.w3.org_nu_.png) | |
 | reviews | search_result.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | unapproved_reviews.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | 404.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | unauthorised.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| reviews | unapproved_reviews.html | ![screenshot](documentation/validation/Unapproved_Reviews_validator.w3.org_nu_.png) | |
+| templates | 404.html | ![screenshot](documentation/validation/404_validator.w3.org_nu_.png) | |
+| templates | unauthorised.html | ![screenshot](documentation/validation/Unauthorised_validator.w3.org_nu_.png) | |
 
 
 ### CSS
@@ -86,7 +86,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| static | style.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| static | style.css | ![screenshot](documentation/validation/CSS_jigsaw.w3.org_css-validator_validator.png) | |
 
 ### JavaScript
 
@@ -98,14 +98,14 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| gamersgambit | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/gamersgambit/settings.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| gamersgambit | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/gamersgambit/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/manage.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/forms.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| gamersgambit | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/gamersgambit/settings.py) | ![screenshot](documentation/validation/Python_validator_settings.png) | |
+| gamersgambit | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/gamersgambit/urls.py) | ![screenshot](documentation/validation/Python_validator_urls.png) | |
+|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/manage.py) | ![screenshot](documentation/validation/Python_validator_manage.png) | |
+| reviews | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/admin.py) | ![screenshot](documentation/validation/Python_validator_admin.png) | |
+| reviews | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/forms.py) | ![screenshot](documentation/validation/Python_validator_forms.png) | |
+| reviews | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/models.py) | ![screenshot](documentation/validation/Python_validator_models.png) | |
+| reviews | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/urls.py) | ![screenshot](documentation/validation/Python_validator_reviews_urls.png) | |
+| reviews | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/views.py) | ![screenshot](documentation/validation/Python_validator_views.png) | |
 
 ## Browser Compatibility
 
@@ -209,13 +209,10 @@ unapproved and pending reviews pages so will have almost identical performance.
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Some minor warnings |
-| Profile | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| all_reviews | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| approved_reviews | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-
-| x | x | x | repeat for any other tested pages/sizes |
+| Home | ![screenshot](documentation/lighthouse/Lighthouse_mobile_home.png) | ![screenshot](documentation/lighthouse/Lighthouse_desktop_home.png) | Some minor warnings |
+| About | ![screenshot](documentation/lighthouse/Lighthouse_mobile_about.png) | ![screenshot](documentation/lighthouse/Lighthouse_desktop_about.png) | Some minor warnings |
+| all_reviews | ![screenshot](documentation/lighthouse/Lighthouse_mobile_allreviews.png) | ![screenshot](documentation/lighthouse/Lighthouse_desktop_allreviews.png) | Slow response time due to large images |
+| review_detail | ![screenshot](documentation/lighthouse/Lighthouse_mobile_reviewdetail.png) | ![screenshot](documentation/lighthouse/Lighthouse_desktop_reviewdetail.png) | Slow response time due to large images |
 
 ## Defensive Programming
 
@@ -355,16 +352,22 @@ from the respective feature.
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a user I want to be able to easily navigate between the various pages on the website so that I can access the content I am looking for efficiently. | ![screenshot](documentation/features/Desktop_navbar_loggedin.png) |
+| As a user I want to be welcomed to the website by a page that gives me an idea of what the website is about and has links to other necessary pages. | ![screenshot](documentation/features/Desktop_home.png) |
+| As a user I want to be able to view an about page that gives a detailed view of what the website is about so that I know what to expect from it. | ![screenshot](documentation/features/Desktop_about.png) |
+| As a user I want to be able to easily access the public reviews so that I can explore the various reviews and their contents. | ![screenshot](documentation/features/Desktop_allreviews.png) |
+| As a user I want to be able to view a more detailed view of a particular review, so that I can read the full length review. | ![screenshot](documentation/features/Desktop_reviewdetail_loggedout.png) |
+| As a user I want to be able to search reviews so that I can easily retrieve only a certain type of review, by title, tag or platform. | ![screenshot](documentation/features/Desktop_searchresults.png) |
+| As a user I want to be able to easily sign up and login to the website to access the options and content only registered users have access to. | ![screenshot](documentation/features/Desktop_register.png) |
+| As a user I want visual feedback when I perform an action to let me know if my action was successful/unsuccessful. (one example) | ![screenshot](documentation/features/messages/Review_submitted_message.png) |
+| As a returning user I want access to a list of my unapproved reviews so that I can easily access them for edit or deletion. | ![screenshot](documentation/features/Desktop_unapprovedreviews.png) |
+| As a returning user I want to have access to a list of my approved reviews so that I can easily access them for edit or deletion. | ![screenshot](documentation/features/Desktop_approvedreviews.png) |
+| As a returning user I want to be able to create, read update and delete my own reviews on the website so that others can access these reviews if they are approved. | ![screenshot](documentation/features/feature09.png) |
+| As a returning user I want access to a profile page that allows me to read, edit or delete my existing reviews. | ![screenshot](documentation/features/feature09.png) |
+| As an Admin I should be able to create, read, update and delete reviews to keep the site in order. | ![screenshot](documentation/features/Desktop_reviewdetail_userowned.png) |
+| As an Admin I want access to a list of reviews that are pending approval so that I can easily access them for approval or deletion. | ![screenshot](documentation/features/Desktop_pendingreviews.png) |
+| As an Admin I want a link to the admin page on the front end so I can easily access the admin page for database /site management.. | ![screenshot](documentation/features/Desktop_navbar_admin.png) |
+| As an Admin I can create, read, update and delete users. No screenshot available, all working.
 
 ## Bugs
 

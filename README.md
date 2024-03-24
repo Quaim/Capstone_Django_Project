@@ -146,28 +146,28 @@ In this section, list all of your user stories for the project.
 
 ### New Site Users
 
-- As a user I want to be able to easily navigate between the various pages on the website so that I can access the content I am looking for efficiently
-- As a user I want to be able to view an about page that gives a detailed view of what the website is about so that I know what to expect from it
-- As a user I want to be welcomed to the website by a page that gives me an idea of what the website is about and has links to other necessary pages
-- As a user I want to be able to view a more detailed view of a particular review, so that I can read the full length review
-- As a User I want to be able to easily access the public reviews so that I can explore the various reviews and their contents
-- As a User I want to be able to search reviews so that I can easily retrieve only a certain type of review, by title, tag or platform
-- As a user I want to be able to easily sign up and login to the website to access the options and content only registered users have access to
-- As a user I want visual feedback when I perform an action to let me know if my action was successful/unsuccessful
+- As a user I want to be able to easily navigate between the various pages on the website so that I can access the content I am looking for efficiently.
+- As a user I want to be able to view an about page that gives a detailed view of what the website is about so that I know what to expect from it.
+- As a user I want to be welcomed to the website by a page that gives me an idea of what the website is about and has links to other necessary pages.
+- As a user I want to be able to view a more detailed view of a particular review, so that I can read the full length review.
+- As a user I want to be able to easily access the public reviews so that I can explore the various reviews and their contents.
+- As a user I want to be able to search reviews so that I can easily retrieve only a certain type of review, by title, tag or platform.
+- As a user I want to be able to easily sign up and login to the website to access the options and content only registered users have access to.
+- As a user I want visual feedback when I perform an action to let me know if my action was successful/unsuccessful.
 
 ### Returning Site Users
 
-- As a returning User I want access to a list of my unapproved reviews so that I can easily access them for edit or deletion
-- As a returning User I want to have access to a list of my approved reviews so that I can easily access them for edit or deletion
-- As a returning user I want to be able to create, read up date and delete my own reviews on the website so that others can access these reviews if they are approved
-- As a returning user I want access to a profile page that allows me to read, edit or delete my existing reviews
+- As a returning user I want access to a list of my unapproved reviews so that I can easily access them for edit or deletion.
+- As a returning user I want to have access to a list of my approved reviews so that I can easily access them for edit or deletion.
+- As a returning user I want to be able to create, read up date and delete my own reviews on the website so that others can access these reviews if they are approved.
+- As a returning user I want access to a profile page that allows me to read, edit or delete my existing reviews.
 
 
 ### Site Admin
 
-- As an Admin I should be able to create, read, update and delete reviews to keep the site in order
-- As an Admin I can create, read, update and delete users
-- As an Admin I want access to a list of reviews that are pending approval so that I can easily access them for approval or deletion
+- As an Admin I should be able to create, read, update and delete reviews to keep the site in order.
+- As an Admin I can create, read, update and delete users.
+- As an Admin I want access to a list of reviews that are pending approval so that I can easily access them for approval or deletion.
 - As an Admin I want a link to the admin page on the front end so I can easily access the admin page for database /site management.
 
 ## Wireframes
