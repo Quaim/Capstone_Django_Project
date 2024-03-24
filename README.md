@@ -221,8 +221,8 @@ Profile
 <details>
 <summary> Click here to see the Desktop Wireframes </summary>
 
-Home
-  - ![screenshot](documentation/wireframes/Desktop_home_wireframe.png)
+Home                                                                         
+  - ![screenshot](documentation/wireframes/Desktop_home_wireframe.png)         
 
 About
   - ![screenshot](documentation/wireframes/Desktop_about_wireframe.png)
@@ -257,114 +257,153 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ### Existing Features
 
-- **HOME PAGE-#1**
+- **NAVBAR-LOGGED OUT**
+
+    - A navigation bar with all relevant links for the user when they first visit the site and are not logged in, including link to public pages and links to register to the site so they can access the part of the site that require being logged in. 
+
+![screenshot](documentation/features/Desktop_navbar_loggedout.png)
+
+- **NAVBAR-LOGGED IN**
+
+    - A navigation bar with all relevant links for a returning user when they are logged in to the site, including link to public pages and additional links to create a review and access their profile page. 
+
+![screenshot](documentation/features/Desktop_navbar_loggedin.png)
+
+- **NAVBAR-ADMIN**
+
+    - A navigation bar with all relevant links for an admin with the standard logged in links and the additon of a link that takes them to the admin panel of the site where they can manage the sites backend etc.
+
+![screenshot](documentation/features/Desktop_navbar_admin.png)
+
+- **FOOTER**
+
+    - A footer at the bottom of the page that has social media and linkedin/github links to the creator of the website as well as a copyright message with the owners name.
+
+![screenshot](documentation/features/Desktop_footer.png)
+
+- **HOME PAGE**
 
     - Welcome page for users giving users an idea of what the site is about but not being overloaded with content
 
-![screenshot](documentation/features/feature01.png)
+![screenshot](documentation/features/Desktop_home.png)
 
-- **ABOUT PAGE-#2**
+- **ABOUT PAGE**
 
     - Simple about page explaining what the website is about
 
-![screenshot](documentation/features/feature02.png)
+![screenshot](documentation/features/Desktop_about.png)
 
-- **ALL REVIEWS-#3**
-
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
-
-![screenshot](documentation/features/feature03.png)
-
-- **REVIEW DETAIL-#4**
+- **ALL REVIEWS**
 
     - A page/pages where all public approved reviews are displayed to the user so they can explore them
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_allreviews.png)
 
-- **PROFILE PAGE-#5**
+- **REVIEW DETAIL NONAUTHOR/ADMIN OR LOGGED OUT**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - After clicking the "full review" button users will be taken to a page showing the full review of the relevant entry.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_reviewdetail_loggedout.png)
 
-- **APPROVED REVIEWS-#6**
+- **REVIEW DETAIL USERS REVIEW**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - After clicking the "full review" button users will be taken to a page showing the full review of the relevant entry, if the user created this review they will also see buttons for deleting or editing the review.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_reviewdetail_userowned.png)
 
-- **UNAPPROVED REVIEWS-#7**
+- **REVIEW DETAIL ADMIN**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - After clicking the "full review" button users will be taken to a page showing the full review of the relevant entry, if the user is an admin they will also see a button for deleting the review if required.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_reviewdetail_notowned_admin.png)
 
-- **PENDING REVIEWS (ADMIN)-#8**
+- **PROFILE PAGE USER**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - A simple profile page with buttons for accessing a users approved and unapproved reviews where they can edit or delete those reviews by clicking on the full review/user option button
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_profile.png)
 
-- **CREATE REVIEW-#9**
+- **PROFILE PAGE ADMIN**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - A simple profile page with buttons for accessing a users approved and unapproved reviews where they can edit or delete those reviews by clicking on the full review/user option button. In addition, superusers/admins can access a button for pending reviews where they can then approve or reject/delete a review.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_profile_admin.png)
 
-- **EDIT REVIEW-#10**
+- **APPROVED REVIEWS**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - A page that renders the current users approved reviews in the same manner as the all reviews page.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_approvedreviews.png)
 
-- **DELETE REVIEW-#11**
+- **UNAPPROVED REVIEWS**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - A page that renders the current users unapproved reviews in the same manner as the all reviews page.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_unapprovedreviews.png)
 
-- **SEARCH REVIEWS-#12**
+- **PENDING REVIEWS (ADMIN)**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - A page that renders the current all pending review in the same manner as the all reviews page. The admins will then have the option to approve or delete reviews accordingly.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_pendingreviews.png)
 
-- **LOGIN-#13**
+- **CREATE REVIEW**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - A page that presents a form for creating a new review, once submitted the review will be added to the database and added to the pending reviews page for an admin to either approve or delete the review if it doesnt meet the requirements. 
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_createreview.png)
 
-- **LOGOUT-#14**
+- **EDIT REVIEW**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - A page where the user can edit their review, after they ahve clicked on the edit button the information from that review will be added into the form and they can add their edits, once submitted the review will then go back into pending review as the status of approved will be changed to false in case their changes do not comply with the criteria set by the site admins.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_editreview.png)
 
-- **REGISTER/SIGNUP-#15**
+- **DELETE REVIEW**
 
-    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+    - On the review detail page of a review, if the user is either the author of that review or an admin they will have a button for deleting the current review from the database. Once clicked a modal will pop up asking them to confirm their decision.
 
-![screenshot](documentation/features/feature03.png)
+![screenshot](documentation/features/Desktop_deletereview_modal.png)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
+- **SEARCH REVIEWS**
 
-Repeat as necessary for as many features as your site contains.
+    - A search bar is located in the navbar on all pages and allows the user to search for a specific type of review, if a reviews platform, title, tags or genre contains that search query these reviews will be rendered in the same manner as the all reviews page.
 
-Hint: the more, the merrier!
+![screenshot](documentation/features/Desktop_searchresults.png)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+- **LOGIN**
+
+    - A page where returning users can enter their information to log in to the site.
+
+![screenshot](documentation/features/Desktop_signin.png)
+
+- **LOGOUT**
+
+    - A page allowing users to logout and confirm that they want to log out of the site.
+
+![screenshot](documentation/features/Desktop_signout.png)
+
+- **REGISTER/SIGNUP**
+
+    - A page where new users can register/signup to the site so they can access the content accessable only by logged in users.
+![screenshot](documentation/features/Desktop_register.png)
+
+- **UNAUTHORISED PAGE**
+
+    - If users try to access a page restricted to only admins they will be presented with this page that tells them they dont have access and provides links back to the main site or to login incase they are an admin who hasnt logged in.
+
+![screenshot](documentation/features/Desktop_unauthorised.png)
+
+- **CUSTOM 404 PAGE**
+
+    - If a user finds themselves on a page that doesnt exist they will be presented with a custom 404 page that provides links back to the main site.
+
+![screenshot](documentation/features/Desktop_404.png)
 
 ### Future Features
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+There are various features that I didnt implemenet in this itteration of the site due to time constraints but would like to add in the future
+to further flesh out the site and improve user experience.
 
 - Filter/search by category/tag/genre/platform
     - As a User I want to easily access a list of categories/genres/tags/platforms so I can filter reviews by them
@@ -382,30 +421,15 @@ Consider adding any helpful links or notes to help remind you in the future, if 
 
 ## Tools & Technologies Used
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- ⚠️⚠️ REQUIRED <-- delete me ⚠️⚠️
 - [![Markdown Builder](https://img.shields.io/badge/Markdown_Builder-grey?logo=markdown&logoColor=000000)](https://tim.2bn.dev/markdown-builder) used to generate README and TESTING templates.
 - [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [![Git](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
-- ⚠️⚠️ CHOOSE ONLY ONE <-- delete me ⚠️⚠️
 - [![Gitpod](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) used as a cloud-based IDE for development.
-- ⚠️⚠️ CHOOSE ALL APPLICABLE <-- delete me ⚠️⚠️
 - [![HTML](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
 - [![Python](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) used as the back-end programming language.
-- ⚠️⚠️ CHOOSE ONLY ONE <-- delete me ⚠️⚠️
 - [![Heroku](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) used for hosting the deployed back-end site.
-- ⚠️⚠️ CHOOSE ONLY ONE (if applicable) <-- delete me ⚠️⚠️
 - [![Bootstrap](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- ⚠️⚠️ CHOOSE ALL APPLICABLE <-- delete me ⚠️⚠️
 - [![Django](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
 - [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-grey?logo=postgresql&logoColor=4169E1)](https://www.postgresql.org) used as the relational database management.
 - [![ElephantSQL](https://img.shields.io/badge/ElephantSQL-grey?logo=postgresql&logoColor=36A6E2)](https://www.elephantsql.com) used as the Postgres database.
@@ -414,49 +438,48 @@ Feel free to delete any unused items below as necessary.
 - [![AWS S3](https://img.shields.io/badge/AWS_S3-grey?logo=amazons3&logoColor=569A31)](https://aws.amazon.com/s3) used for online static file storage.
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
+- [![ChatGPT](https://img.shields.io/badge/ChatGPT-grey?logo=chromatic&logoColor=75A99C)](https://chat.openai.com) used to generate media for game reviews and site logo
 - https://imagecolorpicker.com/ used to match the colours in the logo to use in the theme of the site
 
 ## Database Design
 
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
-Understanding the relationships between different tables can save time later in the project.
+Understanding the relationships between different tables can save time later in the project. 
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
+You can also generate a more comprehensive diagram of your model/s and their relationships, below is an example of my main midel and 
+and auto generated ERD.
 
-Using your defined models (one example below), create an ERD with the relationships identified.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+Main model
 
 ```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+class GameReview(models.Model):
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='game_reviews', null=True
+        )
+    title = models.CharField(max_length=100, null=False, blank=False)
+    slug = models.SlugField(max_length=200, blank=True)
+    genre = models.ForeignKey(
+        Genre, on_delete=models.CASCADE, null=True, blank=False
+        )
+    tags = models.ManyToManyField('Tag')
+    platforms = models.ManyToManyField('Platform')
+    description = models.CharField(max_length=550, null=False, blank=False)
+    featured_image = CloudinaryField("image", default="placeholder")
+    review = models.TextField(null=False, blank=False)
+    rating = models.PositiveIntegerField(
+        default=1, choices=[(i, i) for i in range(1, 6)]
+        )
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:  # Generate slug only if it's not already set
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.name
+        return self.title
 ```
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
-
-A more comprehensive ERD can be auto-generated once you're
-at the end of your development stages, just before you submit.
-Follow the steps below to obtain a thorough ERD that you can include.
-Feel free to leave the steps in the README for future use to yourself.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 I have used `pygraphviz` and `django-extensions` to auto-generate an ERD.
 
@@ -491,34 +514,19 @@ It isn't a specialized tool, but with the right tags and project creation/issue 
 
 Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-Consider adding a basic screenshot of your Projects Board.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-![screenshot](documentation/gh-projects.png)
+![screenshot](documentation/Project_board.png)
 
 ### GitHub Issues
 
 [GitHub Issues](https://github.com/Quaim/Capstone_Django_Project/issues) served as an another Agile tool.
 There, I used my own **User Story Template** to manage user stories.
 
-It also helped with milestone iterations on a weekly basis.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-Consider adding a screenshot of your Open and Closed Issues.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- [Open Issues](https://github.com/Quaim/Capstone_Django_Project/issues) [![GitHub issues](https://img.shields.io/github/issues/Quaim/Capstone_Django_Project)](https://github.com/Quaim/Capstone_Django_Project/issues)
-
-    ![screenshot](documentation/gh-issues-open.png)
+It also helped with milestone iterations on a weekly basis. Below is a screenshot of the majority of my closed issues, all of the ones that could fit on one page.
+I had no open issues when the project was handed in.
 
 - [Closed Issues](https://github.com/Quaim/Capstone_Django_Project/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/Quaim/Capstone_Django_Project)](https://github.com/Quaim/Capstone_Django_Project/issues?q=is%3Aissue+is%3Aclosed)
 
-    ![screenshot](documentation/gh-issues-closed.png)
+    ![screenshot](documentation/closed_issues.png)
 
 ### MoSCoW Prioritization
 
@@ -536,16 +544,6 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 > For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-**IMPORTANT:**
-
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 The live deployed application can be found deployed on [Heroku](https://gamers-gambit-b5f3c4f8c27f.herokuapp.com).
 
@@ -704,14 +702,6 @@ You can fork this repository by using the following steps:
 
 
 ## Credits
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ### Content
 
