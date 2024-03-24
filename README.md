@@ -165,7 +165,6 @@ In this section, list all of your user stories for the project.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
 - As an Admin I should be able to create, read, update and delete reviews to keep the site in order
 - As an Admin I can create, read, update and delete users
 - As an Admin I want access to a list of reviews that are pending approval so that I can easily access them for approval or deletion
@@ -196,8 +195,8 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ### Mobile Wireframes
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+<details>
+<summary> Click here to see the Mobile Wireframes </summary>
 
 Home
   - ![screenshot](documentation/wireframes/Mobile_home_wireframe.png)
@@ -214,13 +213,13 @@ Review Detail
 Profile
   - ![screenshot](documentation/wireframes/Mobile_profile_wireframe.png)
 
-< / details >
+</details>
 
 
 ### Desktop Wireframes
 
-< details >
-< summary > Click here to see the Desktop Wireframes < / summary >
+<details>
+<summary> Click here to see the Desktop Wireframes </summary>
 
 Home
   - ![screenshot](documentation/wireframes/Desktop_home_wireframe.png)
@@ -237,7 +236,7 @@ Review Detail
 Profile
   - ![screenshot](documentation/wireframes/Desktop_profile_wireframe.png)
 
-< / details >
+</details>
 
 ## Features
 
@@ -258,21 +257,93 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ### Existing Features
 
-- **YOUR-TITLE-FOR-FEATURE-#1**
+- **HOME PAGE-#1**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Welcome page for users giving users an idea of what the site is about but not being overloaded with content
 
 ![screenshot](documentation/features/feature01.png)
 
-- **YOUR-TITLE-FOR-FEATURE-#2**
+- **ABOUT PAGE-#2**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Simple about page explaining what the website is about
 
 ![screenshot](documentation/features/feature02.png)
 
-- **YOUR-TITLE-FOR-FEATURE-#3**
+- **ALL REVIEWS-#3**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **REVIEW DETAIL-#4**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **PROFILE PAGE-#5**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **APPROVED REVIEWS-#6**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **UNAPPROVED REVIEWS-#7**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **PENDING REVIEWS (ADMIN)-#8**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **CREATE REVIEW-#9**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **EDIT REVIEW-#10**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **DELETE REVIEW-#11**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **SEARCH REVIEWS-#12**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **LOGIN-#13**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **LOGOUT-#14**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
+
+![screenshot](documentation/features/feature03.png)
+
+- **REGISTER/SIGNUP-#15**
+
+    - A page/pages where all public approved reviews are displayed to the user so they can explore them
 
 ![screenshot](documentation/features/feature03.png)
 
@@ -295,12 +366,19 @@ Consider adding any helpful links or notes to help remind you in the future, if 
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#1
-    - Any additional notes about this feature.
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#2
-    - Any additional notes about this feature.
-- YOUR-TITLE-FOR-FUTURE-FEATURE-#3
-    - Any additional notes about this feature.
+- Filter/search by category/tag/genre/platform
+    - As a User I want to easily access a list of categories/genres/tags/platforms so I can filter reviews by them
+- Latest Gaming news
+    - As a User I want access to a section dedicated to the latest game related news so I can keep up to date with gaming related information that might be of interest to me
+- List of Games
+    - As a User I want access to a page that is dedicated to storing a collection of all types of games so that I can browse games that might be of interest me and additionally have the option to add a review to that game
+- Extended User Profile
+    - As a User I want an extended profile with an image and additional information about myself so that other users and the admins can get a better sense of who I am and the website can tailor itself to my preferences etc
+- Rich Text Editor
+    - As a User I would like a rich text editor on the create/edit review form so that I can properly format my review to have proper headings and clear sections etc
+- Breadcrumb Links
+    - As a User I want a set of breadcrumb links on each page so that I can easily access relevant pages whilst browsing the site
+
 
 ## Tools & Technologies Used
 
@@ -328,23 +406,16 @@ Feel free to delete any unused items below as necessary.
 - ⚠️⚠️ CHOOSE ONLY ONE (if applicable) <-- delete me ⚠️⚠️
 - [![Bootstrap](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - ⚠️⚠️ CHOOSE ALL APPLICABLE <-- delete me ⚠️⚠️
-- [![Google Sheets](https://img.shields.io/badge/Google_Sheets-grey?logo=googlesheets&logoColor=34A853)](https://docs.google.com/spreadsheets) used for storing data from my Python app.
-- [![Jest](https://img.shields.io/badge/Jest-grey?logo=jest&logoColor=c21325)](https://jestjs.io) used for automated JavaScript testing.
-- [![Flask](https://img.shields.io/badge/Flask-grey?logo=flask&logoColor=000000)](https://flask.palletsprojects.com) used as the Python framework for the site.
-- [![MongoDB](https://img.shields.io/badge/MongoDB-grey?logo=mongodb&logoColor=47A248)](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-grey?logo=sqlalchemy&logoColor=D71F00)](https://www.sqlalchemy.org) used as the relational database management with Flask.
 - [![Django](https://img.shields.io/badge/Django-grey?logo=django&logoColor=092E20)](https://www.djangoproject.com) used as the Python framework for the site.
 - [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-grey?logo=postgresql&logoColor=4169E1)](https://www.postgresql.org) used as the relational database management.
 - [![ElephantSQL](https://img.shields.io/badge/ElephantSQL-grey?logo=postgresql&logoColor=36A6E2)](https://www.elephantsql.com) used as the Postgres database.
 - [![Cloudinary](https://img.shields.io/badge/Cloudinary-grey?logo=cloudinary&logoColor=3448C5)](https://cloudinary.com) used for online static file storage.
 - [![WhiteNoise](https://img.shields.io/badge/WhiteNoise-grey?logo=python&logoColor=FFFFFF)](https://whitenoise.readthedocs.io) used for serving static files with Heroku.
-- [![Stripe](https://img.shields.io/badge/Stripe-grey?logo=stripe&logoColor=008CDD)](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [![Gmail API](https://img.shields.io/badge/Gmail_API-grey?logo=gmail&logoColor=EA4335)](https://mail.google.com) used for sending emails in my application.
-- [![MailChimp](https://img.shields.io/badge/MailChimp-grey?logo=mailchimp&logoColor=FFE01B)](https://mailchimp.com) used for sending newsletter subscriptions.
 - [![AWS S3](https://img.shields.io/badge/AWS_S3-grey?logo=amazons3&logoColor=569A31)](https://aws.amazon.com/s3) used for online static file storage.
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
 - https://imagecolorpicker.com/ used to match the colours in the logo to use in the theme of the site
+
 ## Database Design
 
 Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
@@ -667,27 +738,10 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 
 ### Media
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-⚠️⚠️ EXAMPLE LINKS - REPLACE WITH YOUR OWN ⚠️⚠️
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
 | [favicon](https://favicon.io/favicon-converter/) | entire site | image | favicon on all pages |
 | [ChatGPT](https://chat.openai.com/) | entire site | images | all review images and site logo |
-
 
 
 ### Acknowledgements
