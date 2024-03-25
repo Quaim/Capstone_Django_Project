@@ -109,9 +109,6 @@ You DO NOT need to use all of the browsers below, just pick any 3 (minimum).
 Recommended browsers to consider:
 - [Chrome](https://www.google.com/chrome)
 - [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
 - [Opera](https://www.opera.com/download)
 
 **IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
@@ -124,17 +121,77 @@ Sample browser testing documentation:
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
-I've tested my deployed project on multiple browsers to check for compatibility issues.
+I've tested my deployed project on multiple browsers to check for compatibility issues. The resolution for each test was 1024x834.
+I didnt test on every single page, I chose home, about, profile, all reviews and review detail(approve,unapproved,pending and search results have the same layout/functionality)
 
-| Browser | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browsers/browser-chrome-home.png) | ![screenshot](documentation/browsers/browser-chrome-about.png) | ![screenshot](documentation/browsers/browser-chrome-contact.png) | ![screenshot](documentation/browsers/browser-chrome-etc.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browsers/browser-firefox-home.png) | ![screenshot](documentation/browsers/browser-firefox-about.png) | ![screenshot](documentation/browsers/browser-firefox-contact.png) | ![screenshot](documentation/browsers/browser-firefox-etc.png) | Works as expected |
-| Edge | ![screenshot](documentation/browsers/browser-edge-home.png) | ![screenshot](documentation/browsers/browser-edge-about.png) | ![screenshot](documentation/browsers/browser-chrome-edge.png) | ![screenshot](documentation/browsers/browser-edge-etc.png) | Works as expected |
-| Safari | ![screenshot](documentation/browsers/browser-safari-home.png) | ![screenshot](documentation/browsers/browser-safari-about.png) | ![screenshot](documentation/browsers/browser-safari-contact.png) | ![screenshot](documentation/browsers/browser-safari-etc.png) | Minor CSS differences |
-| Brave | ![screenshot](documentation/browsers/browser-brave-home.png) | ![screenshot](documentation/browsers/browser-brave-about.png) | ![screenshot](documentation/browsers/browser-brave-contact.png) | ![screenshot](documentation/browsers/browser-brave-etc.png) | Works as expected |
-| Opera | ![screenshot](documentation/browsers/browser-opera-home.png) | ![screenshot](documentation/browsers/browser-opera-about.png) | ![screenshot](documentation/browsers/browser-opera-contact.png) | ![screenshot](documentation/browsers/browser-opera-etc.png) | Minor differences |
-| repeat for any other tested browsers | x | x | x | x | x |
+### Chrome
+All working as expected
+
+<details>
+<summary> Click here to see the Chrome Pages </summary>
+
+Home
+  - ![screenshot](documentation/browsers/Chrome_home.png)
+
+About
+  - ![screenshot](documentation/browsers/Chrome_about.png)
+
+All Reviews
+  - ![screenshot](documentation/browsers/Chrome_allreviews.png)
+
+Profile
+  - ![screenshot](documentation/browsers/Chrome_profile.png)
+
+Review Detail
+  - ![screenshot](documentation/browsers/Chrome_reviewdetail.png)
+
+</details>
+
+### Firefox(developer)
+All working as expected
+
+<details>
+<summary> Click here to see the Firefox(developer) Pages </summary>
+
+Home
+  - ![screenshot](documentation/browsers/Firefox_home.png)
+
+About
+  - ![screenshot](documentation/browsers/Firefox_about.png)
+
+All Reviews
+  - ![screenshot](documentation/browsers/Firefox_allreviews.png)
+
+Profile
+  - ![screenshot](documentation/browsers/Firefox_profile.png)
+
+Review Detail
+  - ![screenshot](documentation/browsers/Firefox_reviewdetail.png)
+
+</details>
+
+### Opera
+All working as expected
+
+<details>
+<summary> Click here to see the Opera Pages </summary>
+
+Home
+  - ![screenshot](documentation/browsers/Opera_home.png)
+
+About
+  - ![screenshot](documentation/browsers/Opera_about.png)
+
+All Reviews
+  - ![screenshot](documentation/browsers/Opera_allreviews.png)
+
+Profile
+  - ![screenshot](documentation/browsers/Opera_profile.png)
+
+Review Detail
+  - ![screenshot](documentation/browsers/Opera_reviewdetail.png)
+
+</details>
 
 ## Responsiveness
 
@@ -153,7 +210,7 @@ About
   - ![screenshot](documentation/responsiveness/Desktop_about.png)
 
 All Reviews
-  - ![screenshot](documentation/responsiveness/Dekstop_allreviews.png)
+  - ![screenshot](documentation/responsiveness/Desktop_allreviews.png)
 
 Review Detail
   - ![screenshot](documentation/responsiveness/Desktop_reviewdetail_loggedout.png)
@@ -197,7 +254,6 @@ Delete Review (Modal)
 Unauthorised Page
   - ![screenshot](documentation/responsiveness/Desktop_unauthorised.png)
 
-[jump to the top](###Desktop-Dev-Tools)
 
 </details>
 
@@ -255,7 +311,6 @@ Edit Review
 Unauthorised Page
   - ![screenshot](documentation/responsiveness/Tablet_unauthorised.png)
 
-[jump to the top](###Tablet-Dev-Tools)
 
 </details>
 
@@ -378,7 +433,7 @@ When in doubt, use the above method instead, and delete the table below.
 | | User must enter value in all required fields | Can't submit if a field doesnt have value | Pass | |
 | | Click on edit button in review detail | If user if author, taken to prefilled form with the relevant information rendered into each field | Pass | |
 | | Edit any of the fields | User can update any of the fields in the form | Pass | |
-| | Cant brute force using url | Users who arent auther will receive message saying they dont have access | Pass | |
+| | Cant brute force using url | Users who arent author will receive message saying they dont have access | Pass | |
 | | Click the Submit button | Redirects to home page, message of success and remove from approved reviews into pending reviews | Pass | |
 | Delete Review | | | | |
 | | User must be author or super user for delete button to appear | Button doesnt show/url won't work if this check is failed | Pass | |
@@ -405,13 +460,6 @@ When in doubt, use the above method instead, and delete the table below.
 
 
 | repeat for all remaining pages | x | x | x | x |
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ## User Story Testing
 
@@ -464,10 +512,13 @@ Any remaining open issues can be tracked [here](https://github.com/Quaim/Capston
 ## Unfixed Bugs
 
 - On all devices, the associated review image in the container zooms in on the image, more so at differnet resolutions instead of scaling the image to fit each resolution
-    - Full image on all_reviews(and other pages where multiple reviews are rendered) 
-    ![screenshot](documentation/bugs/Bug_Full_Image.png)
+
+- Full image on all_reviews(and other pages where multiple reviews are rendered) 
+
+![screenshot](documentation/bugs/Bug_Full_Image.png)
  
-    - Broken image on review_detail page
-    ![screenshot](documentation/bugs/Bug_Broken_Image.png)
+- Broken image on review_detail page
+
+![screenshot](documentation/bugs/Bug_Broken_Image.png)
 
     - Attempted fix: I tried to add additional media queries to handle this, but as I found out about it quite late into devlopment I ran out of time and it isnt a site breaking issue so will have to fix it in the next iteration of the site.
