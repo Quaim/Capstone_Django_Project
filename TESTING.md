@@ -528,9 +528,9 @@ There are various feedback messages related so some of the features above, such 
 
 ## Bugs
 
-**Fixed Bugs**
-
 [![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AQuaim%2FCapstone_Django_Project%20label%3Abug&label=bugs)](https://github.com/Quaim/Capstone_Django_Project/issues?q=is%3Aissue+is%3Aclosed+label%3Abug)
+
+**Fixed Bugs**
 
 All previously closed/fixed bugs can be tracked [here](https://github.com/Quaim/Capstone_Django_Project/issues?q=is%3Aissue+is%3Aclosed).
 
@@ -565,3 +565,6 @@ Any remaining open issues can be tracked [here](https://github.com/Quaim/Capston
 ![screenshot](documentation/bugs/Bug_Broken_Image.png)
 
     - Attempted fix: I tried to add additional media queries to handle this, but as I found out about it quite late into devlopment I ran out of time and it isnt a site breaking issue so will have to fix it in the next iteration of the site.
+
+> [!NOTE]  
+> Return back to the [README.md](README.md) file.
