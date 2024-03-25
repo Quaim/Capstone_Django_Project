@@ -35,10 +35,10 @@ it provided when I asked for a vibrant colour scheme including red, and it produ
 and decided to use https://imagecolorpicker.com/ to find the exact colours within the logo and then use those colours for the theme of 
 the site.
 
-- `#000000` used for the header and footer text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
+- `#ffffff` used for background and various text.
+- `#212529` used for primary text.
+- `#e71a36` used for the header and footer text.
+- `#036977` used for various highlights, buttons and bordering.
 - All Used in Gamers Gambit logo
 
 I used [coolors.co](https://coolors.co/ffffff-212529-e71a36-036977) to generate my colour palette.
