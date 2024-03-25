@@ -11,19 +11,19 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| reviews | about.html | ![screenshot](documentation/validation/About_validator.w3.org_nu_.png) | |
-| reviews | all_reviews.html | ![screenshot](documentation/validation/All_Reviews_validator.w3.org_nu_.png) | |
-| reviews | approved_reviews.html | ![screenshot](documentation/validation/Approved_Reviews_validator.w3.org_nu_.png) | |
+| reviews | about.html | ![screenshot](documentation/validation/About_validator.w3.org_nu_.png) | No significant errors that are avoidable |
+| reviews | all_reviews.html | ![screenshot](documentation/validation/All_Reviews_validator.w3.org_nu_.png) | No significant errors that are avoidable |
+| reviews | approved_reviews.html | ![screenshot](documentation/validation/Approved_Reviews_validator.w3.org_nu_.png) | No significant errors that are avoidable |
 | reviews | create_review.html | ![screenshot](documentation/validation/Create_Review_validator.w3.org_nu_.png) |The manytomany fields had same class so registered a duplicate attribute error, unavoidable  |
 | reviews | edit_review.html | ![screenshot](documentation/validation/Editreview_validator.png) | same unavoidable errors as the create review due to manytomany fields |
-| reviews | index.html | ![screenshot](documentation/validation/Home_validator.w3.org_nu_.png) | |
-| reviews | pending_reviews.html | ![screenshot](documentation/validation/Pending_Reviews_validator.w3.org_nu_.png) | |
-| reviews | profile.html | ![screenshot](documentation/validation/Profile_validator.w3.org_nu_.png) | |
-| reviews | review_detail.html | ![screenshot](documentation/validation/Search_Results_validator.w3.org_nu_.png) | |
-| reviews | search_result.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| reviews | unapproved_reviews.html | ![screenshot](documentation/validation/Unapproved_Reviews_validator.w3.org_nu_.png) | |
-| templates | 404.html | ![screenshot](documentation/validation/404_validator.w3.org_nu_.png) | |
-| templates | unauthorised.html | ![screenshot](documentation/validation/Unauthorised_validator.w3.org_nu_.png) | |
+| reviews | index.html | ![screenshot](documentation/validation/Home_validator.w3.org_nu_.png) | No significant errors that are avoidable |
+| reviews | pending_reviews.html | ![screenshot](documentation/validation/Pending_Reviews_validator.w3.org_nu_.png) | No significant errors that are avoidable |
+| reviews | profile.html | ![screenshot](documentation/validation/Profile_validator.w3.org_nu_.png) | No significant errors that are avoidable |
+| reviews | review_detail.html | ![screenshot](documentation/validation/Review_detail_validator.png) | No significant errors that are avoidable |
+| reviews | search_result.html | ![screenshot](documentation/validation/Search_Results_validator.w3.org_nu_.png) | No significant errors that are avoidable |
+| reviews | unapproved_reviews.html | ![screenshot](documentation/validation/Unapproved_Reviews_validator.w3.org_nu_.png) |No significant errors that are avoidable  |
+| templates | 404.html | ![screenshot](documentation/validation/404_validator.w3.org_nu_.png) |No significant errors that are avoidable |
+| templates | unauthorised.html | ![screenshot](documentation/validation/Unauthorised_validator.w3.org_nu_.png) | No significant errors that are avoidable |
 
 
 ### CSS
@@ -32,7 +32,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| static | style.css | ![screenshot](documentation/validation/CSS_jigsaw.w3.org_css-validator_validator.png) | |
+| static | style.css | ![screenshot](documentation/validation/CSS_jigsaw.w3.org_css-validator_validator.png) | No significant errors that are avoidable |
 
 ### JavaScript
 
@@ -44,14 +44,14 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| gamersgambit | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/gamersgambit/settings.py) | ![screenshot](documentation/validation/Python_validator_settings.png) | |
-| gamersgambit | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/gamersgambit/urls.py) | ![screenshot](documentation/validation/Python_validator_urls.png) | |
-|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/manage.py) | ![screenshot](documentation/validation/Python_validator_manage.png) | |
-| reviews | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/admin.py) | ![screenshot](documentation/validation/Python_validator_admin.png) | |
-| reviews | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/forms.py) | ![screenshot](documentation/validation/Python_validator_forms.png) | |
-| reviews | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/models.py) | ![screenshot](documentation/validation/Python_validator_models.png) | |
-| reviews | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/urls.py) | ![screenshot](documentation/validation/Python_validator_reviews_urls.png) | |
-| reviews | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/views.py) | ![screenshot](documentation/validation/Python_validator_views.png) | |
+| gamersgambit | settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/gamersgambit/settings.py) | ![screenshot](documentation/validation/Python_validator_settings.png) | No Errors |
+| gamersgambit | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/gamersgambit/urls.py) | ![screenshot](documentation/validation/Python_validator_urls.png) | No Errors |
+|  | manage.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/manage.py) | ![screenshot](documentation/validation/Python_validator_manage.png) | No Errors |
+| reviews | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/admin.py) | ![screenshot](documentation/validation/Python_validator_admin.png) | No Errors |
+| reviews | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/forms.py) | ![screenshot](documentation/validation/Python_validator_forms.png) | No Errors |
+| reviews | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/models.py) | ![screenshot](documentation/validation/Python_validator_models.png) | No Errors |
+| reviews | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/urls.py) | ![screenshot](documentation/validation/Python_validator_reviews_urls.png) | No Errors |
+| reviews | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/views.py) | ![screenshot](documentation/validation/Python_validator_views.png) | No Errors |
 
 ## Browser Compatibility
 
