@@ -4,8 +4,17 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/Quaim/Capstone_Django_Project)](https://github.com/Quaim/Capstone_Django_Project/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Quaim/Capstone_Django_Project)](https://github.com/Quaim/Capstone_Django_Project)
 
+I am someone who has enjoyed gaming for most of my life and decided to do a project surrounding this as I wanted to do something I was passionate about, as I felt this would provide me with the most inspiration and motivation during the development of the project and allow me to delve into a world I was very familiar with.
+
+This project utilises HTML, CSS, Bootstrap, JavaScript, Python, Django, and ElephantSQL to create a simple and accessible gaming review platform for anyone and everyone that has a passion for gaming. At present it is focused on offering a selection of game reviews and allows users to not only read existing reviews on the site but to create their own and offer their own experience to help visitors pick their next gaming adventure.
+
+In the future I would like to expand this to include information on the latest gaming news so that visitors can easily keep up to date on the latest developments in the industry and upcoming games they can keep an eye out for.
+
+## Introducing **Gamers Gambit**
+
 Welcome to Gamers Gambit (GG), the go-to destination for gamers seeking the latest reviews, news, and insights into the vast world of video games. Our mission is to explore the depths of gaming, from the adrenaline-pumping action of blockbuster titles to the thoughtful narratives of indie gems, providing our community with the knowledge they need to find their next great gaming adventure.
 Join us as we navigate the ever-evolving landscapes of digital worlds, offering expert reviews and engaging content tailored for both the seasoned veterans and newcomers to the gaming scene. At Gamers Gambit , we're more than just a review site; we're a vibrant community of gamers sharing a passion for the art and culture of video games. Dive in and discover your next favourite game with us!
+
 
 
 ![screenshot](documentation/mockup.png)
