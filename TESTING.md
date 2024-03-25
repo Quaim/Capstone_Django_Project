@@ -3,49 +3,6 @@
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Feature-by-Feature Testing:
-
-Go through each feature of your portfolio site and detail the testing process for each.
-
-Explain the functionality and demonstrate how it aligns with the intended purpose. This could include:
-
-- Navigation: Ensuring smooth transitions between pages, links directing to the correct destinations.
-- Responsive Design: Checking for compatibility across various devices and screen sizes.
-- Portfolio Display: Verifying that projects are properly showcased with accurate descriptions, images, and links.
-- Contact Form: Testing the form submission process, ensuring the user receives a confirmation, and you receive the message.
-
-User Experience Testing:
-
-- Usability Testing: Have users (or simulated users) interact with the site and provide feedback. Document any issues encountered and the resolutions implemented.
-- Accessibility Testing: Confirm compliance with accessibility standards (e.g., screen reader compatibility, proper alt text for images, keyboard navigation).
-
-Compatibility Testing:
-
-- Browser Compatibility: Testing on different browsers (Chrome, Firefox, Safari, Edge, etc.) to ensure consistent performance.
-- Device Compatibility: Ensuring functionality across various devices (desktops, laptops, tablets, and mobile phones).
-- Performance Testing (optional):
-	- Speed and Load Testing: Tools like PageSpeed Insights or GTmetrix to check page load times and optimize where necessary.
-	- Scalability Testing: Assess how the site handles increased traffic or usage.
-
-Regression Testing:
-
-After implementing fixes or updates, ensure that previous features and functionalities still work as intended. This prevents new changes from breaking existing features.
-
-Documentation and Logs:
-
-Maintain records of testing procedures, results, and any bugs encountered along with their resolutions. This helps demonstrate a systematic approach to testing and problem-solving.
-User Feedback Incorporation:
-
-If applicable, mention how user feedback has been taken into account and implemented to enhance the user experience.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 ## Code Validation
 
 ### HTML
@@ -97,29 +54,6 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | reviews | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Quaim/Capstone_Django_Project/main/reviews/views.py) | ![screenshot](documentation/validation/Python_validator_views.png) | |
 
 ## Browser Compatibility
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to discuss testing the live/deployed site on various browsers.
-
-Consider testing AT LEAST 3 different browsers, if available on your system.
-
-You DO NOT need to use all of the browsers below, just pick any 3 (minimum).
-
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Opera](https://www.opera.com/download)
-
-**IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
-
-Please note, there are services out there that can test multiple browser compatibilities at the same time.
-Some of these are paid services, but some are free.
-If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
-Sample browser testing documentation:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 I've tested my deployed project on multiple browsers to check for compatibility issues. The resolution for each test was 1024x834.
 I didnt test on every single page, I chose home, about, profile, all reviews and review detail(approve,unapproved,pending and search results have the same layout/functionality)
@@ -242,9 +176,6 @@ Sign Out
 Create Review
   - ![screenshot](documentation/responsiveness/Desktop_createreview.png)
 
-Edit Review
-  - ![screenshot](documentation/responsiveness/Desktop_editreview.png)
-
 Delete Review (Modal)
   - ![screenshot](documentation/responsiveness/Desktop_deletereview_modal.png)
 
@@ -257,11 +188,66 @@ Unauthorised Page
 
 </details>
 
-### Tablet Dev Tools 
+### Tablet Dev Tools - IPAD (768X1024)
 All working as expected
 
 <details>
-<summary> Click here to see the Tablet Pages </summary>
+<summary> Click here to see the Tablet/Ipad Pages </summary>
+
+Home
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_home.png)
+
+About
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_about.png)
+
+All Reviews
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_allreviews.png)
+
+Review Detail
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_reviewdetail.png)
+
+Search Result
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_searchresults.png)
+
+Profile
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_profile.png)
+
+Approved Review
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_approvedreviews.png)
+
+Unapproved Review
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_unapprovedreviews.png)
+
+Pending Reviews 
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_pendingreviews.png)
+
+Sign In
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_login.png)
+
+Register
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_register.png)
+
+Sign Out
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_signout.png)
+
+Create Review
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_createreview.png)
+
+404 page
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_404.png)
+
+Unauthorised Page
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_unauthorised.png)
+
+
+</details>
+
+
+### Tablet Dev Tools Full View Port 
+All working as expected
+
+<details>
+<summary> Click here to see the Tablet full view port Pages </summary>
 
 Home
   - ![screenshot](documentation/responsiveness/Tablet_home.png)
@@ -302,9 +288,6 @@ Sign Out
 Create Review
   - ![screenshot](documentation/responsiveness/Tablet_createreview.png)
 
-Edit Review
-  - ![screenshot](documentation/responsiveness/Tablet_editreview.png)
-
 404 page
   - ![screenshot](documentation/responsiveness/Tablet_404.png)
 
@@ -314,11 +297,65 @@ Unauthorised Page
 
 </details>
 
-### Mobile Dev Tools 
+### Mobile Dev Tools IPhone 6/7/8 Plus (414x736)
 All working as expected
 
 <details>
-<summary> Click here to see the Tablet Pages </summary>
+<summary> Click here to see the Mobile/Iphone pages </summary>
+
+Home
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_home.png)
+
+About
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_about.png)
+
+All Reviews
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_allreviews.png)
+
+Review Detail
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_reviewdetail.png)
+
+Search Result
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_searchresults.png)
+
+Profile
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_profile.png)
+
+Approved Review
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_approvedreviews.png)
+
+Unapproved Review
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_unapprovedreviews.png)
+
+Pending Reviews 
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_pendingreviews.png)
+
+Sign In
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_login.png)
+
+Register
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_register.png)
+
+Sign Out
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_signout.png)
+
+Create Review
+  - ![screenshot](documentation/responsiveness/with_frames/Iphone_createreview.png)
+
+404 page
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_404.png)
+
+Unauthorised Page
+  - ![screenshot](documentation/responsiveness/with_frames/Ipad_unauthorised.png)
+
+</details>
+
+
+### Mobile Dev Tools Full View Port 
+All working as expected
+
+<details>
+<summary> Click here to see the Mobile full view port pages </summary>
 
 Home
   - ![screenshot](documentation/responsiveness/Mobile_home.png)
@@ -359,9 +396,6 @@ Sign Out
 Create Review
   - ![screenshot](documentation/responsiveness/Mobile_createreview.png)
 
-Edit Review
-  - ![screenshot](documentation/responsiveness/Mobile_editreview.png)
-
 404 page
   - ![screenshot](documentation/responsiveness/Mobile_404.png)
 
@@ -372,8 +406,6 @@ Unauthorised Page
 
 
 ## Lighthouse Audit
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. It has issues with pages that require login, so 
 I will only provide the pages that have successful lighthouse reports, the all_reviews pages has identical functionality and design to the approved,
@@ -390,16 +422,6 @@ unapproved and pending reviews pages so will have almost identical performance.
 
 In the section below I have manually tested each relevant page feature to test they work and tested each form and url in terms of how they hold up in terms of security, i.e users not being able to access pages they shouldnt be able to, edit or delete data that isnt theres, and forms should only be submitted if they arent empty and have a value in all required fields.
 
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Another way of performing defensive testing is a simple Pass/Fail for each test.
-The assessors prefer the above method, with the full test explained, but this is also acceptable in most cases.
-
-When in doubt, use the above method instead, and delete the table below.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 | Page | User Action/ Feature | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
 | Navigation Bar | | | | |
@@ -414,7 +436,7 @@ When in doubt, use the above method instead, and delete the table below.
 | | Load logged in user profile page | All relevant buttons load successfully | Pass | |
 | | Approved reviews | If user clicks on this button and has approved reviews in database they will be taken to a page where these are rendered | Pass | |
 | | Unpproved reviews | If user clicks on this button and has unapproved reviews in database they will be taken to a page where these are rendered | Pass | |   
-| | Pending reviews (Admin) | If a user is a superuser/admin a pending reviews button will be visble, and if they click on this button and there are reviews pending approval in the database they will be taken to a page where these are rendered, and below each review there will be buttons to either read the full review, approve it or delete it. The approval and deletion buttons also exist in the review details page of unapproved/pending reviews. If approved the reviews approved status will change to approved and they will be added to the approved reviews(user)/all reviews pages(public) | Pass | |  
+| | Pending reviews (Admin) | If a user is a superuser/admin a pending reviews button will be visble, and if they click on this button and there are reviews pending approval in the database they will be taken to a page where these are rendered, and below each review there will be buttons to either read the full review, approve it or delete it. The approval and deletion buttons also exist in the review details page of unapproved/pending reviews. If approved the reviews approved status will change to approved and they will be added to the approved reviews(user)/all reviews pages(public). The user will be displayed a message that tells them that their approval or deletion was succesful | Pass | |  
 | | No bruteforce | Only logged in users can access page, asked to log in if not | Pass | |
 | | No bruteforce pending reviews | Only super users can access page, someone trying to access this url who isnt will be taken to the custom unauthorised page | Pass | |
 | Create Review | | | | |
@@ -436,7 +458,7 @@ When in doubt, use the above method instead, and delete the table below.
 | | Cant brute force using url | Users who arent author will receive message saying they dont have access | Pass | |
 | | Click the Submit button | Redirects to home page, message of success and remove from approved reviews into pending reviews | Pass | |
 | Delete Review | | | | |
-| | User must be author or super user for delete button to appear | Button doesnt show/url won't work if this check is failed | Pass | |
+| | User must be author or super user for delete button to appear | Button doesnt show/url won't work if this check is failed, successful deletion message appears once it has been confirmed by user | Pass | |
 | | Try to brute force | There is no way to brute force this with the use of a URL and there are restrictions in the backend preventing any way to do this | Pass | |
 | Sign Up | | | | |
 | | Enter valid password that meets laid out critera | Submit wont work and will notify you of which criteria failed | Pass | |
@@ -454,12 +476,33 @@ When in doubt, use the above method instead, and delete the table below.
 | | Enter nothing in search bar | User taken to page rendering all approved reviews as the search query has nothing in it so added no additional filter to the view that renders the objects on the page | Pass | |
 | | Enter query into search bar | User taken to page rendering search results with only approved reviews containing that query in the title, tag, platform or genre. If no reivews have that query in the title the page will simply have a message saying no reviews containg that query exist in the database and tell them to check their spelling just in case | Pass | |
 
+## Feedback Messages
+There are various feedback messages related so some of the features above, such as signing in, creating a rewiew, editing a review etc. 
 
+* Logged In Message
+  - ![screenshot](documentation/feedback/Loggedin_message.png)
 
+* Logged Out Message
+  - ![screenshot](documentation/feedback/Signout_message.png)
 
+* Edit Successful Message
+  - ![screenshot](documentation/feedback/Review_updated_message.png)
 
+* Edit Access denied Message
+  - ![screenshot](documentation/feedback/Edit_access_denied_message.png)
 
-| repeat for all remaining pages | x | x | x | x |
+* Review Submitted Message
+  - ![screenshot](documentation/feedback/Review_submitted_message.png)
+
+* Review Approved Message
+  - ![screenshot](documentation/feedback/Review_approved_message.png)
+
+* Review Deleted Message
+  - ![screenshot](documentation/feedback/Desktop_deletereview_message.png)
+
+* Example of invalid password on register, failed criteria
+  - ![screenshot](documentation/feedback/Invalidpassword_signup_message.png)
+
 
 ## User Story Testing
 
