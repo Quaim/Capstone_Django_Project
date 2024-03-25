@@ -7,69 +7,6 @@
 Welcome to Gamers Gambit (GG), the go-to destination for gamers seeking the latest reviews, news, and insights into the vast world of video games. Our mission is to explore the depths of gaming, from the adrenaline-pumping action of blockbuster titles to the thoughtful narratives of indie gems, providing our community with the knowledge they need to find their next great gaming adventure.
 Join us as we navigate the ever-evolving landscapes of digital worlds, offering expert reviews and engaging content tailored for both the seasoned veterans and newcomers to the gaming scene. At Gamers Gambit , we're more than just a review site; we're a vibrant community of gamers sharing a passion for the art and culture of video games. Dive in and discover your next favourite game with us!
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-!! IMPORTANT !! RE: Table of Contents
-
-DO NOT add a Table of Contents to your README or TESTING!!
-These are outdated since 2021 when GitHub added them built-in to Markdown files automatically.
-
-Assessors see this as bad practice since it's outdated for a few years now,
-as if you've taken it from someone else's project that did the same thing.
-
----
-
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
-
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
-
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://gamers-gambit-b5f3c4f8c27f.herokuapp.com
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
----
-
-GitHub now supports CALLOUTS in Markdown files.
-There are some callouts already embedded in this application for you.
-However, if you feel that you want to add more, there are certain ones you can use.
-
-NOTE: the preview for callouts isn't yet supported in Gitpod/Codeanywhere/VSCode/etc.
-You'll have to commit/push the changes to GitHub to see it in action.
-
-> [!NOTE]  
-> BLUE: Highlights information that users should take into account, even when skimming.
-
-> [!TIP]  
-> GREEN: Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> PURPLE: Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> YELLOW: Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]  
-> RED: Negative potential consequences of an action.
-
-Source: https://github.com/orgs/community/discussions/16925
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ![screenshot](documentation/mockup.png)
 
@@ -77,16 +14,10 @@ source: [amiresponsive](https://ui.dev/amiresponsive?url=https://gamers-gambit-b
 
 ## UX
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
 I wanted the design to be simple and intuitive for all audiences so that it is accessible as possible as the target audience 
 is essentially anyone and everyone, as long as they enjoy the world of gaming. 
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 ### Colour Scheme
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
 
 For the colour scheme I decided to keep it fairly simple with only a couple of main colours, I knew I wanted red and 
 the green kind of came by accident but I was pleased with the overall aesthetic as there was a decent contrast between
@@ -95,23 +26,11 @@ it provided when I asked for a vibrant colour scheme including red, and it produ
 and decided to use https://imagecolorpicker.com/ to find the exact colours within the logo and then use those colours for the theme of 
 the site.
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 - `#000000` used for the header and footer text.
 - `#E84610` used for primary highlights.
 - `#4A4A4F` used for secondary text.
 - `#009FE3` used for secondary highlights.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+- All Used in Gamers Gambit logo
 
 I used [coolors.co](https://coolors.co/ffffff-212529-e71a36-036977) to generate my colour palette.
 
@@ -120,29 +39,11 @@ I used [coolors.co](https://coolors.co/ffffff-212529-e71a36-036977) to generate 
 
 ### Typography
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
-
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
-
-Example:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Exo](https://fonts.google.com/specimen/Exo?query=Exo+) was used for the the vast majority/all text on the site.
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
 ## User Stories
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ### New Site Users
 
@@ -171,24 +72,6 @@ In this section, list all of your user stories for the project.
 - As an Admin I want a link to the admin page on the front end so I can easily access the admin page for database /site management.
 
 ## Wireframes
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-Alternatively, dropdowns are a way to condense several wireframes into a collapsible menu to save space.
-Dropdowns in Markdown are considered some of the only acceptable HTML components that are allowed for assessment purposes.
-
-⚠️ **IMPORTANT**! ⚠️ **IMPORTANT**! ⚠️ **IMPORTANT**! ⚠️
-The example below uses the `details` and `summary` code elements.
-However, for these scripts to work, I've had to add spaces within the `< >` elements.
-
-You MUST remove these spaces for it to work properly on your own README/TESTING files.
-Remove the spaces within the `< >` brackets for the `details` and `summary` code elements,
-for the Mobile, Tablet, and Desktop wireframes.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 To follow best practice, wireframes were developed for mobile  and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
@@ -239,21 +122,6 @@ Profile
 </details>
 
 ## Features
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ### Existing Features
 
@@ -705,25 +573,13 @@ You can fork this repository by using the following steps:
 
 ### Content
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-⚠️⚠️ EXAMPLE LINKS - REPLACE WITH YOUR OWN ⚠️⚠️
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| 
+| [doctypeKieran](https://github.com/doctypeKieran/ci-capstone-project/tree/main) | inspiration on certain pages | approved, unapproved and pending reviews |
+| [YouTube](https://www.youtube.com/@Codemycom) | Conceptual understanding | various videos helped me create certain views/aspects of project |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
 
 ### Media
@@ -736,7 +592,6 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his amazing support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
 - I would like to thank my fellow bootcampers on codeinstitute for being there for eachother and being a joy to work with over the course. 
